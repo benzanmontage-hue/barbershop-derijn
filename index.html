@@ -17,7 +17,7 @@ h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing
 .gold{color:#f59e0b}
 
 /* NAV */
-nav{position:sticky;top:0;background:rgba(18,18,18,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid rgba(201,162,39,.15)}
+nav{position:sticky;top:39px;background:rgba(18,18,18,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid rgba(245,158,11,.15)}
 nav .container{display:flex;align-items:center;justify-content:space-between;height:70px}
 .logo{font-family:'Oswald',sans-serif;font-weight:800;font-size:1.4rem;color:#fff;text-decoration:none}
 .logo span{color:#f59e0b}
@@ -105,7 +105,12 @@ footer .social a:hover{color:#f59e0b}
 </head>
 <body>
 
-<nav>
+<!-- Sticky booking banner -->
+<div style="position:fixed;top:0;left:0;right:0;background:#f59e0b;color:#121212;text-align:center;padding:10px;font-weight:700;font-size:.9rem;z-index:200;letter-spacing:1px">
+  <a href="#" style="color:#121212;text-decoration:none">NEED A HAIRCUT? ✂️ BOOK NU — KLIK HIER</a>
+</div>
+
+<nav style="margin-top:39px">
   <div class="container">
     <a href="#" class="logo">Barbershop <span>de Rijn</span></a>
     <ul class="nav-links" id="navMobile">
@@ -281,6 +286,16 @@ footer .social a:hover{color:#f59e0b}
         <div class="hours-row"><span class="day">Zondag</span><span class="time">Gesloten</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="bg-dark" style="padding:60px 0;text-align:center">
+  <div class="container">
+    <span class="section-tag">Volg ons</span>
+    <h2 class="section-title" style="margin-bottom:8px">@barbershopderijn</h2>
+    <p style="color:#a8a196;margin-bottom:24px">Bekijk onze nieuwste cuts en sfeer op Instagram</p>
+    <a href="#" style="display:inline-block;background:#f59e0b;color:#121212;padding:14px 32px;border-radius:8px;font-weight:700;text-decoration:none">📸 Volg op Instagram</a>
   </div>
 </section>
 
