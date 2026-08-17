@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Barbershop de Rijn — Herenkapper & Barbier Arnhem Centrum | Knippen & Scheren</title>
+<meta name="description" content="Barbershop de Rijn in Arnhem centrum. Specialist in herenkapsels, baarden en scheerbeurten. Knippen vanaf €27,50. 5 min van Arnhem Centraal. Boek nu je afspraak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:#e8e2d4;background:#121212;line-height:1.6}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.gold{color:#f59e0b}
+
+/* NAV */
+nav{position:sticky;top:0;background:rgba(18,18,18,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid rgba(201,162,39,.15)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Oswald',sans-serif;font-weight:800;font-size:1.4rem;color:#fff;text-decoration:none}
+.logo span{color:#f59e0b}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#cfc8b8;text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#f59e0b}
+.nav-book{background:#f59e0b;color:#121212!important;padding:11px 22px;border-radius:6px;font-weight:700;text-decoration:none;font-size:.88rem;transition:all .2s}
+.nav-book:hover{background:#fbbf24;transform:translateY(-1px)}
+.mobile-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+@media(max-width:768px){
+  .nav-links{position:fixed;top:70px;left:0;width:100%;background:#121212;flex-direction:column;padding:20px;gap:16px;transform:translateY(-120%);transition:.3s;border-bottom:1px solid #2a2a2a}
+  .nav-links.open{transform:translateY(0)}
+  .mobile-toggle{display:block}
+}
+
+/* HERO */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#121212 40%,#1e1a14)}
+.hero-content{position:relative;z-index:2;padding:120px 0 80px;max-width:640px}
+.hero-badge{display:inline-block;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.3);color:#f59e0b;padding:8px 16px;border-radius:50px;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:800;line-height:1.08;color:#fff;margin-bottom:20px}
+.hero h1 .gold{display:block}
+.hero p{font-size:1.1rem;color:#a8a196;max-width:480px;margin-bottom:36px;line-height:1.7}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 32px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:all .25s}
+.btn-gold{background:#f59e0b;color:#121212}
+.btn-gold:hover{background:#fbbf24;transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(201,162,39,.5);color:#f59e0b}
+.btn-outline:hover{border-color:#f59e0b;background:rgba(201,162,39,.08)}
+.hero-stats{display:flex;gap:40px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(201,162,39,.15)}
+.stat-num{font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:800;color:#f59e0b}
+.stat-label{font-size:.78rem;color:#a8a196}
+@media(max-width:768px){.hero-stats{gap:24px;flex-wrap:wrap}}
+
+/* SECTIES */
+section{padding:90px 0}
+.section-tag{display:inline-block;color:#f59e0b;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
+.section-title{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.2}
+.section-sub{color:#a8a196;max-width:560px;margin-bottom:50px;font-size:1rem;line-height:1.7}
+.center{text-align:center}
+.center .section-sub{margin:0 auto 50px}
+.bg-dark{background:#0d0d0d}
+.bg-gold{background:#f59e0b;color:#121212}
+
+/* DIENSTEN */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-col{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px 28px;transition:all .25s}
+.service-col:hover{border-color:rgba(201,162,39,.4);transform:translateY(-4px)}
+.service-col h3{font-size:1.2rem;color:#f59e0b;margin-bottom:6px}
+.service-col .col-sub{font-size:.82rem;color:#a8a196;margin-bottom:22px}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid #242424;font-size:.9rem}
+.price-row:last-child{border-bottom:none}
+.price-row .name{color:#e8e2d4}
+.price-row .desc{display:block;font-size:.72rem;color:#7a7468}
+.price-row .price{font-weight:700;color:#f59e0b;white-space:nowrap}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr}}
+
+/* BARBERS */
+.barbers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.barber-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:36px 28px;text-align:center;transition:all .25s}
+.barber-card:hover{border-color:rgba(201,162,39,.4)}
+.barber-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#b45309);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:800;color:#121212}
+.barber-card h3{font-size:1.15rem;color:#fff;margin-bottom:4px}
+.barber-card .role{color:#f59e0b;font-size:.82rem;font-weight:600}
+@media(max-width:900px){.barbers-grid{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-info p{color:#a8a196;margin-bottom:14px}
+.contact-item{display:flex;align-items:center;gap:12px;margin-bottom:16px;color:#e8e2d4}
+.contact-item .ico{width:44px;height:44px;background:rgba(201,162,39,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.contact-item a{color:#f59e0b;text-decoration:none}
+.hours{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:28px}
+.hours h3{color:#f59e0b;margin-bottom:16px}
+.hours-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #242424;font-size:.9rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{color:#a8a196}
+.hours-row .time{color:#e8e2d4;font-weight:600}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:#0d0d0d;padding:40px 0;border-top:1px solid #2a2a2a;text-align:center;color:#7a7468;font-size:.82rem}
+footer .social{display:flex;justify-content:center;gap:16px;margin-bottom:20px}
+footer .social a{color:#a8a196;text-decoration:none;font-size:.9rem}
+footer .social a:hover{color:#f59e0b}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="logo">Barbershop <span>de Rijn</span></a>
+    <ul class="nav-links" id="navMobile">
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#barbers">Barbers</a></li>
+      <li><a href="#over">Over ons</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" class="nav-book">Boek nu</a></li>
+    </ul>
+    <button class="mobile-toggle" onclick="document.getElementById('navMobile').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">Barbershop · Arnhem Centrum</span>
+      <h1>Barbershop <span class="gold">De Rijn</span></h1>
+      <p style="font-weight:600;color:#fff;font-size:1.05rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px">Dé plek voor herenkapsels en scheerbeurten in Arnhem</p>
+      <p>Ontdek Barbershop de Rijn, dé plek voor herenkapsels en scheerbeurten in Arnhem. Onze ervaren barbiers leveren stijlvolle en persoonlijke service voor een zelfverzekerde look. Maak vandaag nog een afspraak en ervaar de perfecte coupe en scheerbeurt in het centrum van Arnhem.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn btn-gold">Maak een afspraak</a>
+        <a href="#diensten" class="btn btn-outline">Onze diensten</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">4.9★</div><div class="stat-label">Klantbeoordeling</div></div>
+        <div><div class="stat-num">15+</div><div class="stat-label">Jaar ervaring</div></div>
+        <div><div class="stat-num">3</div><div class="stat-label">Vakkundige barbers</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIENSTEN -->
+<section id="diensten">
+  <div class="container">
+    <div class="center">
+      <span class="section-tag">Onze diensten</span>
+      <h2 class="section-title">Knippen, scheren & baardverzorging</h2>
+      <p class="section-sub">Van een strakke taperfade tot een klassieke hot towel shave — alles voor de perfecte look.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-col">
+        <h3>Knippen</h3>
+        <p class="col-sub">Toe aan een nieuw kapsel of frisse look?</p>
+        <div class="price-row"><span class="name">Knippen volwassenen<span class="desc">Wassen, knippen & modelleren</span></span><span class="price">€27,50</span></div>
+        <div class="price-row"><span class="name">Knippen & lange baard<span class="desc">Knippen + baard scheren</span></span><span class="price">€42,50</span></div>
+        <div class="price-row"><span class="name">Knippen & korte baard<span class="desc">Wassen, knippen + baard</span></span><span class="price">€35,00</span></div>
+        <div class="price-row"><span class="name">Taperfade only<span class="desc">Zijkanten & achterkant</span></span><span class="price">€20,00</span></div>
+        <div class="price-row"><span class="name">Studenten<span class="desc">Op vertoon studentenkaart</span></span><span class="price">€25,00</span></div>
+        <div class="price-row"><span class="name">Special Treatment<span class="desc">Knippen, scheren, waxen, gezichtsbehandeling</span></span><span class="price">€50,00</span></div>
+        <div class="price-row"><span class="name">Kinderen t/m 14 jr<span class="desc"></span></span><span class="price">€22,50</span></div>
+      </div>
+      <div class="service-col">
+        <h3>Scheren</h3>
+        <p class="col-sub">Van snorren tot complete baarden — alles netjes verzorgd.</p>
+        <div class="price-row"><span class="name">Baard scheren<span class="desc">Italian hot towel shave</span></span><span class="price">€20,00</span></div>
+        <div class="price-row"><span class="name">Contouren<span class="desc">Contouren scheren</span></span><span class="price">€15,00</span></div>
+        <div class="price-row"><span class="name">Opscheren rondom<span class="desc"></span></span><span class="price">€20,00</span></div>
+        <div class="price-row"><span class="name">Baard & snor modelleren<span class="desc"></span></span><span class="price">€20,00</span></div>
+      </div>
+      <div class="service-col">
+        <h3>Baard & Snor</h3>
+        <p class="col-sub">Wij begrijpen dat je baard perfect moet zitten.</p>
+        <div class="price-row"><span class="name">Baard modelleren<span class="desc">Modelleren, contouren & baardolie</span></span><span class="price">€17,50</span></div>
+        <div class="price-row"><span class="name">Snor modelleren<span class="desc">Modelleren & snorolie</span></span><span class="price">€15,00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BARBERS -->
+<section id="barbers" class="bg-dark">
+  <div class="container">
+    <div class="center">
+      <span class="section-tag">Onze vakmensen</span>
+      <h2 class="section-title">Ontmoet je barbier</h2>
+      <p class="section-sub">Iconische barbers met passie voor het vak — thuisgevoel gegarandeerd.</p>
+    </div>
+    <div class="barbers-grid">
+      <div class="barber-card"><div class="barber-avatar">O</div><h3>Ozemarov</h3><p class="role">The Owner · Italian Barber</p></div>
+      <div class="barber-card"><div class="barber-avatar">T</div><h3>Tom</h3><p class="role">The Barber</p></div>
+      <div class="barber-card"><div class="barber-avatar">A</div><h3>Arjan</h3><p class="role">De Barbier</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OVER ONS -->
+<section id="over">
+  <div class="container">
+    <div class="center">
+      <span class="section-tag">Over ons</span>
+      <h2 class="section-title">De barbershop waar Arnhem thuiskomt</h2>
+      <p class="section-sub">Bij Barbershop de Rijn zijn we trots op onze professionele en ervaren barbiers. Ons team staat klaar voor de perfecte snit, baardtrim of scheerbeurt — met alleen de beste producten. Ontspan, geniet, en ga zelfverzekerd de deur uit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-dark">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Bezoek ons in het centrum</h2>
+        <p>5 minuten lopen van Arnhem Centraal. Loop gerust binnen of maak een afspraak.</p>
+        <br>
+        <div class="contact-item"><div class="ico">📍</div><div>Rijnstraat 10, Arnhem</div></div>
+        <div class="contact-item"><div class="ico">📞</div><div><a href="tel:+31619939261">06-1993 9261</a></div></div>
+        <div class="contact-item"><div class="ico">✉️</div><div><a href="mailto:info@barbershopderijn.nl">info@barbershopderijn.nl</a></div></div>
+      </div>
+      <div class="hours">
+        <h3>Openingstijden</h3>
+        <div class="hours-row"><span class="day">Maandag</span><span class="time">Gesloten</span></div>
+        <div class="hours-row"><span class="day">Dinsdag - Vrijdag</span><span class="time">09:00 - 18:00</span></div>
+        <div class="hours-row"><span class="day">Zaterdag</span><span class="time">09:00 - 17:00</span></div>
+        <div class="hours-row"><span class="day">Zondag</span><span class="time">Gesloten</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-gold" style="padding:60px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);color:#121212;margin-bottom:12px">Klaar voor een frisse look?</h2>
+    <p style="color:#3a3a3a;margin-bottom:24px;font-size:1rem">Boek vandaag nog je afspraak en ervaar de perfecte coupe.</p>
+    <a href="#" style="display:inline-block;background:#121212;color:#f59e0b;padding:16px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem">✂️ Maak een afspraak</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p>© 2026 Barbershop de Rijn · Rijnstraat 10, Arnhem · 06-1993 9261</p>
+  </div>
+</footer>
+
+</body>
+</html>
