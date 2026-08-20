@@ -1330,6 +1330,124 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--gold);
         }
+
+        /* ═══ PREMIUM ENHANCEMENTS ═══ */
+        /* Scroll-reveal animaties — alleen verbergen als JS actief is */
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
+        }
+        .js .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Navbar blur bij scroll */
+        .navbar.scrolled {
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            background: rgba(255,255,255,0.82) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        /* Hover micro-interacties */
+        .btn, button, a.btn {
+            transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, background 0.3s ease !important;
+        }
+        .btn:hover, button:hover, a.btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        /* Service item hover */
+        .service-item, .service-row, [class*="service"]:hover {
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        /* Back-to-top knop */
+        #backTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+            z-index: 99;
+            font-size: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        }
+        #backTop.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        #backTop:hover {
+            background: var(--gold, #b08d57);
+            transform: translateY(-3px);
+        }
+        /* Subtiele gradient borders op secties */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(176,141,87,0.4), transparent);
+            margin: 0 auto;
+            max-width: 640px;
+        }
+        /* Contact sectie */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+        .contact-card h3 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #b08d57;
+            margin-bottom: 8px;
+            font-family: var(--font-sans, 'Inter', sans-serif);
+        }
+        .contact-card p, .contact-card a {
+            font-size: 1rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        .contact-card a:hover { color: #b08d57; }
+        /* Reviews sectie */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 32px auto 0;
+        }
+        .review-card {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: left;
+        }
+        .review-stars { color: #b08d57; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 12px; }
+        .review-quote { font-style: italic; color: #333; line-height: 1.6; margin-bottom: 16px; font-family: var(--font-serif, serif); }
+        .review-author { font-size: 0.85rem; color: #888; }
     </style>
 </head>
 <body>
@@ -1631,5 +1749,110 @@
     <!-- ============ 6. TRUSTED BY ============ -->
     <section class="trusted" id="trusted">
         <div class="trusted-inner reveal">
-            <span class="section-label">&#8203;Trusted By Thousands&#8203;</span>
-            <div class="trusted-badge" style
+            <span class="section-label">Trusted By Thousands</span>
+            <div class="trusted-badge">
+                <div class="trusted-stars">★★★★★</div>
+                <div class="trusted-score">4.9</div>
+                <div class="trusted-label">Google Reviews · 800+ beoordelingen</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 7. REVIEWS ============ -->
+    <section class="reviews section-padding" id="reviews">
+        <div class="reviews-header reveal">
+            <span class="section-label">Latest Google Reviews</span>
+            <h2 class="section-title">Wat klanten zeggen</h2>
+            <div class="gold-divider" style="margin: 16px auto 0;"></div>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card reveal">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Cleanest skin fade I've had in Arnhem. De barbier nam echt de tijd en de blend was perfect. Koffie terwijl je wacht, spotless zaak."</p>
+                <p class="review-author">Daniel R. — Google · 2 weken geleden</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Walked in op een zaterdag en zat binnen tien minuten in de stoel. Kapsel en baard werden samen als één look gepland."</p>
+                <p class="review-author">Tom V. — Google · 1 maand geleden</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Eerlijke prijzen, geen haast, en precies het resultaat waar ik om vroeg. Aanrader."</p>
+                <p class="review-author">Alex K. — Google · 1 maand geleden</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 8. CONTACT ============ -->
+    <section class="contact section-padding" id="contact">
+        <div class="contact-header reveal">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">Maak een afspraak</h2>
+            <div class="gold-divider" style="margin: 16px auto 0;"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card reveal">
+                <h3>Adres</h3>
+                <p>Rijnstraat 10<br>Arnhem</p>
+            </div>
+            <div class="contact-card reveal">
+                <h3>Telefoon</h3>
+                <p><a href="tel:+31619939261">06-1993 9261</a></p>
+            </div>
+            <div class="contact-card reveal">
+                <h3>E-mail</h3>
+                <p><a href="mailto:info@barbershopderijn.nl">info@barbershopderijn.nl</a></p>
+            </div>
+            <div class="contact-card reveal">
+                <h3>Openingstijden</h3>
+                <p>Di–Vr 09:00–18:00<br>Za 09:00–17:00</p>
+            </div>
+        </div>
+        <div class="contact-cta reveal" style="text-align:center;margin-top:32px;">
+            <button class="btn btn-dark" onclick="window.open('tel:+31619939261')">📞 Bel nu</button>
+        </div>
+    </section>
+
+    <!-- Back to top -->
+    <button id="backTop" aria-label="Naar boven">↑</button>
+
+    <!-- Lenis — premium smooth scroll -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script>
+        document.documentElement.classList.add('js');
+        const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+
+    <!-- Scroll-reveal + nav blur + back-to-top -->
+    <script>
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Navbar blur bij scroll
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Back-to-top knop
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('show', window.scrollY > 600);
+        });
+        backTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
