@@ -4,37 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbershop De Rijn | Arnhem</title>
-    <meta name="description" content="Barbershop De Rijn in Arnhem — Premium herenkapsels, scheerbeurten en baardverzorging. Rijnstraat 10, Arnhem. Bel 06-1993 9261.">
+    <title>Barbershop de Rijn — Premium Herenkapsels & Scheerbeurten in Arnhem</title>
+    <meta name="description" content="Barbershop de Rijn in Arnhem — Premium herenkapsels en scheerbeurten. Vakmanschap, persoonlijke aandacht en luxe verzorging op Rijnstraat 10.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #faf9f7;
-            --text-dark: #111111;
-            --text-muted: #555555;
-            --text-light: #888888;
-            --accent: #f59e0b;
-            --accent-hover: #d98a0b;
-            --accent-light: #fef3c7;
-            --accent-glow: rgba(245, 158, 11, 0.25);
-            --border-light: #e8e6e3;
-            --border-medium: #d4d1cd;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.1);
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --transition-fast: 0.2s ease;
-            --transition-medium: 0.35s ease;
-            --transition-slow: 0.5s ease;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --letter-spacing-tight: 0.02em;
-            --letter-spacing-wide: 0.08em;
-            --letter-spacing-wider: 0.15em;
+            --bg: #fbfaf7;
+            --bg-alt: #f6f3ed;
+            --bg-dark: #1a1a1a;
+            --text: #1a1a1a;
+            --text-muted: #5a5a5a;
+            --text-light: #8a8a8a;
+            --gold: #b08d57;
+            --gold-light: #d4bc96;
+            --gold-pale: #f0e8dc;
+            --border: #e5e0d8;
+            --border-light: #f0ebe5;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+            --radius-sm: 6px;
+            --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --max-width: 1200px;
+            --section-padding: 100px 24px;
         }
 
         *,
@@ -47,359 +44,242 @@
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--bg-secondary);
-            color: var(--text-dark);
-            line-height: 1.6;
-            font-weight: 400;
-            letter-spacing: var(--letter-spacing-tight);
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color var(--transition-fast);
-        }
-
-        ul,
-        ol {
-            list-style: none;
-        }
-
-        button {
-            font-family: inherit;
-            cursor: pointer;
-            border: none;
-            background: none;
-            font-size: inherit;
-        }
-
-        input,
-        textarea,
-        select {
-            font-family: inherit;
-            font-size: inherit;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-subtitle {
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--accent);
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            line-height: 1.1;
-            color: var(--text-dark);
-        }
-
-        .section-description {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 620px;
-            margin: 16px auto 0;
-            font-weight: 400;
+        body {
+            font-family: var(--font-sans);
+            font-weight: 300;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
             letter-spacing: 0.01em;
         }
 
-        .accent-line {
-            width: 50px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
-            margin: 18px auto 0;
+        ::selection {
+            background-color: var(--gold-pale);
+            color: var(--text);
         }
 
-        /* ========== BUTTONS ========== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 32px;
-            font-size: 0.85rem;
-            font-weight: 700;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* ————— CONTAINER ————— */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ————— SECTION HEADINGS ————— */
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.35em;
             text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            border-radius: 50px;
-            transition: all var(--transition-medium);
-            cursor: pointer;
-            border: 2px solid transparent;
-            gap: 8px;
-            white-space: nowrap;
+            color: var(--gold);
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .section-label::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+        .section-label::after {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+        .section-label.no-lines::before,
+        .section-label.no-lines::after {
+            display: none;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .section-header {
             text-align: center;
-            line-height: 1.2;
+            margin-bottom: 60px;
+        }
+        .section-header .section-label {
+            margin-bottom: 20px;
         }
 
-        .btn-primary {
-            background: var(--accent);
-            color: var(--text-dark);
-            border-color: var(--accent);
-            box-shadow: 0 4px 20px var(--accent-glow);
+        /* ————— ANIMATIONS ————— */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in-delay-1 {
+            transition-delay: 0.12s;
+        }
+        .fade-in-delay-2 {
+            transition-delay: 0.24s;
+        }
+        .fade-in-delay-3 {
+            transition-delay: 0.36s;
+        }
+        .fade-in-delay-4 {
+            transition-delay: 0.48s;
         }
 
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            border-color: var(--accent-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(245, 158, 11, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--text-dark);
-            border-color: var(--text-dark);
-        }
-
-        .btn-outline:hover {
-            background: var(--text-dark);
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-outline-light {
-            background: transparent;
-            color: #fff;
-            border-color: #fff;
-        }
-
-        .btn-outline-light:hover {
-            background: #fff;
-            color: var(--text-dark);
-            transform: translateY(-3px);
-        }
-
-        .btn-sm {
-            padding: 10px 20px;
-            font-size: 0.72rem;
-            letter-spacing: var(--letter-spacing-wide);
-            border-radius: 40px;
-            gap: 5px;
-        }
-
-        /* ========== HEADER ========== */
-        .header {
+        /* ————— NAV ————— */
+        .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            padding: 20px 0;
+            transition: all var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(251, 250, 247, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 12px 0;
             border-bottom: 1px solid var(--border-light);
-            transition: all var(--transition-medium);
-            padding: 0 20px;
+            box-shadow: var(--shadow-sm);
         }
-
-        .header.scrolled {
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-            border-bottom-color: var(--border-medium);
-        }
-
-        .header-inner {
+        .navbar-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 72px;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 24px;
         }
-
-        .logo {
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            white-space: nowrap;
+        }
+        .nav-logo span {
+            color: var(--gold);
+        }
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 900;
-            font-size: 1.25rem;
+            gap: 36px;
+        }
+        .nav-links a {
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
-            line-height: 1.1;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: var(--text-dark);
-            font-weight: 900;
-            flex-shrink: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            border: 2px solid #fff;
-            border-radius: 50%;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-        }
-
-        .logo-text .logo-main {
-            font-size: 1.15rem;
-            font-weight: 900;
-            letter-spacing: var(--letter-spacing-wide);
-        }
-
-        .logo-text .logo-sub {
-            font-size: 0.55rem;
-            font-weight: 600;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--text-muted);
-            text-transform: uppercase;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-list {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .nav-list a {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
+            color: var(--text);
             position: relative;
             padding: 4px 0;
-            transition: color var(--transition-fast);
+            transition: color var(--transition);
         }
-
-        .nav-list a::after {
+        .nav-links a::after {
             content: '';
             position: absolute;
             bottom: -2px;
             left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--accent);
-            border-radius: 1px;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform var(--transition-medium);
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width var(--transition);
         }
-
-        .nav-list a:hover {
-            color: var(--accent);
+        .nav-links a:hover {
+            color: var(--gold);
         }
-
-        .nav-list a:hover::after,
-        .nav-list a.active::after {
-            transform: scaleX(1);
+        .nav-links a:hover::after {
+            width: 100%;
         }
-
         .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            background: var(--text);
+            color: #fff !important;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-size: 0.78rem !important;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            transition: all var(--transition);
+            border: 1px solid var(--text);
         }
-
-        .nav-cta .btn {
-            padding: 10px 22px;
-            font-size: 0.7rem;
+        .nav-cta:hover {
+            background: var(--gold) !important;
+            border-color: var(--gold);
+            color: #fff !important;
         }
-
+        .nav-cta::after {
+            display: none !important;
+        }
         .hamburger {
             display: none;
             flex-direction: column;
             gap: 5px;
-            width: 32px;
-            height: 32px;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
-            z-index: 1001;
-            border-radius: 6px;
-            transition: background var(--transition-fast);
+            padding: 4px;
+            background: none;
+            border: none;
         }
-
-        .hamburger:hover {
-            background: var(--bg-secondary);
-        }
-
         .hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: var(--text-dark);
-            border-radius: 2px;
-            transition: all var(--transition-medium);
-            transform-origin: center;
+            width: 26px;
+            height: 1.5px;
+            background: var(--text);
+            transition: all var(--transition);
         }
-
         .hamburger.active span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
+            transform: rotate(45deg) translate(5px, 5px);
         }
         .hamburger.active span:nth-child(2) {
             opacity: 0;
-            transform: scaleX(0);
         }
         .hamburger.active span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
+            transform: rotate(-45deg) translate(5px, -5px);
         }
 
-        /* Mobile menu overlay */
         .mobile-menu {
             display: none;
             position: fixed;
@@ -407,134 +287,116 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(251, 250, 247, 0.98);
             backdrop-filter: blur(20px);
             z-index: 999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity var(--transition-medium);
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 28px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
         }
-
         .mobile-menu.open {
             opacity: 1;
-            pointer-events: auto;
-            display: flex;
+            pointer-events: all;
         }
-
         .mobile-menu a {
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: all var(--transition-fast);
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--text);
+            letter-spacing: 0.02em;
+            transition: color var(--transition);
         }
-
         .mobile-menu a:hover {
-            color: var(--accent);
-            background: var(--bg-secondary);
+            color: var(--gold);
+        }
+        .mobile-menu .mobile-cta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: var(--text);
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 40px;
         }
 
-        .mobile-menu .btn-primary {
-            margin-top: 16px;
-        }
-
-        /* ========== HERO ========== */
+        /* ————— HERO ————— */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 140px 20px 100px;
             position: relative;
-            background: var(--bg-secondary);
+            background: linear-gradient(180deg, #fbfaf7 0%, #f8f5f0 50%, #fbfaf7 100%);
+            padding: 120px 24px 80px;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.06) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(176, 141, 87, 0.04) 0%, transparent 70%);
             pointer-events: none;
         }
-
         .hero-content {
-            max-width: 800px;
+            max-width: 860px;
             position: relative;
             z-index: 1;
-            animation: fadeUp 0.8s ease-out both;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 22px;
-            border: 2px solid var(--accent);
-            border-radius: 50px;
             font-size: 0.72rem;
-            font-weight: 700;
+            font-weight: 500;
+            letter-spacing: 0.3em;
             text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--accent);
+            color: var(--gold);
             margin-bottom: 28px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(6px);
-            transition: all var(--transition-medium);
+            padding: 8px 20px;
+            border: 1px solid var(--gold-light);
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
         }
-
-        .hero-badge:hover {
-            background: var(--accent);
-            color: var(--text-dark);
-            box-shadow: 0 6px 25px var(--accent-glow);
+        .hero-badge .dot {
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            border-radius: 50%;
         }
-
         .hero-title {
-            font-size: 4rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: clamp(3rem, 8vw, 5.8rem);
             line-height: 1.05;
-            color: var(--text-dark);
+            letter-spacing: -0.03em;
+            color: var(--text);
             margin-bottom: 20px;
         }
-
-        .hero-title span {
-            color: var(--accent);
+        .hero-title em {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--gold);
         }
-
         .hero-tagline {
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--text-muted);
-            margin-bottom: 22px;
-            line-height: 1.5;
+            margin-bottom: 44px;
         }
-
-        .hero-description {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 560px;
-            margin: 0 auto 38px;
-            font-weight: 400;
-            letter-spacing: 0.01em;
-            line-height: 1.7;
-        }
-
         .hero-buttons {
             display: flex;
             align-items: center;
@@ -542,10 +404,44 @@
             gap: 16px;
             flex-wrap: wrap;
         }
-
+        .btn {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            border-radius: 40px;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        .btn-dark {
+            background: var(--text);
+            color: #fff;
+            border-color: var(--text);
+        }
+        .btn-dark:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(176, 141, 87, 0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--border);
+        }
+        .btn-outline:hover {
+            border-color: var(--text);
+            background: var(--text);
+            color: #fff;
+            transform: translateY(-2px);
+        }
         .hero-scroll {
             position: absolute;
-            bottom: 36px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -553,956 +449,1126 @@
             align-items: center;
             gap: 8px;
             color: var(--text-light);
-            font-size: 0.6rem;
-            font-weight: 700;
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            animation: bounceDown 2s infinite;
-            z-index: 1;
-            cursor: pointer;
+            opacity: 0.7;
+            animation: scrollPulse 2.5s ease-in-out infinite;
+        }
+        .hero-scroll .line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+        @keyframes scrollPulse {
+            0%,
+            100% {
+                opacity: 0.7;
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(6px);
+            }
         }
 
-        .hero-scroll::after {
-            content: '';
-            width: 2px;
-            height: 28px;
-            background: var(--border-medium);
-            border-radius: 1px;
+        /* ————— TRUST BAR ————— */
+        .trust-bar {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 28px 0;
+            border-bottom: 3px solid var(--gold);
         }
-
-        /* ========== SERVICES ========== */
-        .services {
-            background: var(--bg-primary);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .trust-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             gap: 24px;
-            margin-top: 20px;
+            flex-wrap: wrap;
         }
-
-        .service-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            padding: 36px 28px;
-            text-align: center;
-            transition: all var(--transition-medium);
-            position: relative;
-            overflow: hidden;
-            cursor: default;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform var(--transition-medium);
-        }
-
-        .service-card:hover {
-            border-color: var(--border-medium);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-4px);
-            background: #fff;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--accent-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin: 0 auto 20px;
-            transition: all var(--transition-medium);
-        }
-
-        .service-card:hover .service-icon {
-            background: var(--accent);
-            transform: scale(1.1) rotate(-5deg);
-        }
-
-        .service-title {
-            font-size: 1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            margin-bottom: 10px;
-            color: var(--text-dark);
-        }
-
-        .service-text {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-            font-weight: 400;
-        }
-
-        /* ========== PRICES ========== */
-        .prices {
-            background: var(--bg-secondary);
-        }
-
-        .prices-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            margin-top: 20px;
-        }
-
-        .price-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            padding: 32px 30px;
-            transition: all var(--transition-medium);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .price-card:hover {
-            box-shadow: var(--shadow-md);
-            border-color: var(--border-medium);
-            transform: translateY(-3px);
-        }
-
-        .price-category {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 2px solid var(--accent);
-        }
-
-        .price-category-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--accent-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .price-category h3 {
-            font-size: 0.95rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
-        }
-
-        .price-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .price-item {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-
-        .price-item .item-name {
-            font-weight: 600;
-            letter-spacing: 0.01em;
-            flex-shrink: 0;
-        }
-
-        .price-item .dots {
-            flex: 1;
-            border-bottom: 2px dotted var(--border-medium);
-            min-width: 20px;
-        }
-
-        .price-item .item-price {
-            font-weight: 800;
-            color: var(--accent);
-            flex-shrink: 0;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-        }
-
-        /* ========== TEAM ========== */
-        .team {
-            background: var(--bg-primary);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px;
-            margin-top: 20px;
-        }
-
-        .team-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            transition: all var(--transition-medium);
-            text-align: center;
-        }
-
-        .team-card:hover {
-            box-shadow: var(--shadow-lg);
-            border-color: var(--border-medium);
-            transform: translateY(-5px);
-        }
-
-        .team-avatar {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background: linear-gradient(135deg, var(--accent-light) 0%, #fdf1d7 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-avatar::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 30%;
-            background: linear-gradient(to top, rgba(17, 17, 17, 0.05) 0%, transparent 100%);
-            pointer-events: none;
-        }
-
-        .team-card:nth-child(2) .team-avatar {
-            background: linear-gradient(135deg, #e8e6e3 0%, #faf9f7 100%);
-            color: var(--text-dark);
-        }
-
-        .team-card:nth-child(3) .team-avatar {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            color: var(--text-dark);
-        }
-
-        .team-body {
-            padding: 24px 20px 28px;
-        }
-
-        .team-name {
-            font-size: 1.25rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
-            margin-bottom: 6px;
-        }
-
-        .team-role {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--accent);
-            margin-bottom: 4px;
-        }
-
-        .team-experience {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-bottom: 18px;
-        }
-
-        .team-card .btn {
-            width: 100%;
-            justify-content: center;
-        }
-
-        /* ========== REVIEWS ========== */
-        .reviews {
-            background: var(--bg-secondary);
-        }
-
-        .reviews-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 28px;
-            background: var(--bg-primary);
-            border: 2px solid var(--accent);
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
-            margin-bottom: 40px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .reviews-badge .star {
-            color: var(--accent);
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .reviews-badge .rating-text {
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 10px;
-        }
-
-        .review-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            padding: 30px 26px;
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-medium);
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .review-card:hover {
-            box-shadow: var(--shadow-md);
-            border-color: var(--border-medium);
-            transform: translateY(-3px);
-        }
-
-        .review-stars {
-            display: flex;
-            gap: 3px;
-            font-size: 1rem;
-            color: var(--accent);
-            letter-spacing: 2px;
-        }
-
-        .review-text {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-            font-weight: 400;
-            flex: 1;
-        }
-
-        .review-author {
+        .trust-item {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding-top: 14px;
-            border-top: 1px solid var(--border-light);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #d4d4d4;
+            white-space: nowrap;
         }
-
-        .review-avatar {
-            width: 40px;
-            height: 40px;
+        .trust-icon {
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
+            border: 1px solid var(--gold-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            font-size: 1rem;
-            text-transform: uppercase;
+            font-size: 0.95rem;
             flex-shrink: 0;
-            letter-spacing: 0.05em;
+            color: var(--gold-light);
         }
-
-        .review-avatar.av1 {
-            background: #fde68a;
-            color: #111;
-        }
-        .review-avatar.av2 {
-            background: #e8e6e3;
-            color: #111;
-        }
-        .review-avatar.av3 {
-            background: #fef3c7;
-            color: #111;
-        }
-
-        .review-author-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .review-author-name {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-        }
-
-        .review-source {
-            font-size: 0.7rem;
-            color: var(--text-light);
+        .trust-item strong {
+            color: #fff;
             font-weight: 500;
         }
 
-        /* ========== CONTACT ========== */
-        .contact {
-            background: var(--bg-primary);
+        /* ————— SERVICES ————— */
+        .services {
+            padding: var(--section-padding);
+            background: var(--bg);
         }
-
-        .contact-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
-            margin-top: 20px;
         }
-
-        .contact-info {
+        .service-category {
+            background: #fff;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-light);
+            padding: 40px 32px;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .service-category:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--gold-light);
+            transform: translateY(-4px);
+        }
+        .service-cat-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--gold);
+        }
+        .service-cat-title {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.5rem;
+            letter-spacing: 0.01em;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .service-cat-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+        .service-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 0;
         }
-
-        .contact-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            padding: 24px 26px;
+        .service-item {
             display: flex;
-            align-items: flex-start;
+            align-items: baseline;
+            justify-content: space-between;
             gap: 16px;
-            transition: all var(--transition-medium);
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: all var(--transition);
+        }
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        .service-item:hover {
+            padding-left: 6px;
+        }
+        .service-name {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 0.01em;
+        }
+        .service-name .hot-towel {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.03em;
+        }
+        .service-dots {
+            flex: 1;
+            border-bottom: 1px dotted var(--border);
+            margin-bottom: 4px;
+            min-width: 20px;
+        }
+        .service-price {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text);
+            white-space: nowrap;
         }
 
-        .contact-card:hover {
-            border-color: var(--border-medium);
-            box-shadow: var(--shadow-sm);
-            transform: translateX(4px);
+        /* ————— WHY US ————— */
+        .why-us {
+            padding: var(--section-padding);
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
         }
-
-        .contact-icon {
-            width: 44px;
-            height: 44px;
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .why-card {
+            text-align: center;
+            padding: 40px 28px;
+            background: #fff;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition);
+        }
+        .why-card:hover {
+            border-color: var(--gold-light);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
             border-radius: 50%;
-            background: var(--accent-light);
+            background: var(--gold-pale);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
+            font-size: 1.5rem;
+            color: var(--gold);
         }
-
-        .contact-detail h4 {
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--accent);
-            margin-bottom: 4px;
-        }
-
-        .contact-detail p,
-        .contact-detail a {
-            font-size: 0.95rem;
+        .why-title {
+            font-family: var(--font-serif);
             font-weight: 600;
-            color: var(--text-dark);
-            letter-spacing: 0.01em;
-            transition: color var(--transition-fast);
+            font-size: 1.2rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+        .why-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-weight: 300;
         }
 
-        .contact-detail a:hover {
-            color: var(--accent);
+        /* ————— TEAM ————— */
+        .team {
+            padding: var(--section-padding);
+            background: var(--bg);
         }
-
-        .opening-hours {
-            background: var(--bg-secondary);
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .team-card {
+            text-align: center;
+            padding: 48px 32px 40px;
+            background: #fff;
+            border-radius: var(--radius);
             border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            padding: 26px 28px;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
         }
-
-        .opening-hours h4 {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--accent);
-            margin-bottom: 16px;
+        .team-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--gold-light);
+            transform: translateY(-4px);
+        }
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            border: 2px solid var(--gold-light);
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: -0.02em;
+        }
+        .team-name {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .team-role {
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .team-exp {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+        .btn-book {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 12px 24px;
+            border-radius: 40px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            transition: all var(--transition);
+            cursor: pointer;
+            background: transparent;
+        }
+        .btn-book:hover {
+            background: var(--gold);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(176, 141, 87, 0.3);
         }
 
-        .hours-list {
+        /* ————— REVIEWS ————— */
+        .reviews {
+            padding: var(--section-padding);
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .reviews-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: #fff;
+            padding: 16px 28px;
+            border-radius: 60px;
+            border: 1px solid var(--gold-light);
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+        .reviews-badge .big-star {
+            font-size: 2rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .reviews-badge .badge-text {
+            text-align: left;
+        }
+        .reviews-badge .badge-score {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--text);
+            line-height: 1;
+        }
+        .reviews-badge .badge-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-light);
+            padding: 36px 32px;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .review-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--gold-light);
+        }
+        .review-stars {
+            color: var(--gold);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .review-author {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+        }
+        .review-author span {
+            color: var(--gold);
+        }
+
+        /* ————— CONTACT ————— */
+        .contact {
+            padding: var(--section-padding);
+            background: var(--bg);
+        }
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+        .contact-detail {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-light);
         }
-
+        .contact-detail:last-child {
+            border-bottom: none;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+        .contact-detail-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .contact-detail-value {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 0.02em;
+        }
+        .contact-detail-value a:hover {
+            color: var(--gold);
+            transition: color var(--transition);
+        }
+        .hours-box {
+            background: var(--bg-alt);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-light);
+            padding: 36px 32px;
+        }
+        .hours-box h3 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
         .hours-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.88rem;
-            color: var(--text-dark);
-            padding-bottom: 8px;
+            padding: 12px 0;
             border-bottom: 1px solid var(--border-light);
+            font-size: 0.95rem;
         }
-
         .hours-row:last-child {
             border-bottom: none;
-            padding-bottom: 0;
         }
-
-        .hours-row .day {
-            font-weight: 600;
+        .hours-day {
+            font-weight: 400;
+            color: var(--text);
         }
-
-        .hours-row .time {
-            font-weight: 700;
+        .hours-time {
+            font-weight: 500;
             color: var(--text-muted);
         }
-
-        .hours-row.closed .time {
-            color: #c0392b;
-            font-weight: 600;
+        .hours-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 16px;
         }
 
-        .contact-form {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            padding: 32px 28px;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .contact-form h3 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-dark);
-            margin-bottom: 6px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .form-group label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wide);
-            color: var(--text-muted);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            padding: 14px 16px;
-            border: 1px solid var(--border-medium);
-            border-radius: var(--radius-sm);
-            background: var(--bg-primary);
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            transition: all var(--transition-fast);
-            outline: none;
-            letter-spacing: 0.01em;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-        }
-
-        /* ========== FOOTER ========== */
+        /* ————— FOOTER ————— */
         .footer {
-            background: #111111;
-            color: #fff;
-            padding: 50px 0 24px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 36px;
-            margin-bottom: 36px;
-        }
-
-        .footer h4 {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: var(--letter-spacing-wider);
-            color: var(--accent);
-            margin-bottom: 16px;
-        }
-
-        .footer p,
-        .footer a {
-            font-size: 0.85rem;
-            color: #ccc;
-            line-height: 1.7;
-            letter-spacing: 0.01em;
-            transition: color var(--transition-fast);
-        }
-
-        .footer a:hover {
-            color: var(--accent);
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
+            background: var(--bg-dark);
+            color: #d4d4d4;
+            padding: 48px 0 32px;
             text-align: center;
+        }
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #fff;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .footer-logo span {
+            color: var(--gold);
+        }
+        .footer-address {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .footer-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto 20px;
+            opacity: 0.5;
+        }
+        .footer-copy {
             font-size: 0.75rem;
             color: #888;
-            letter-spacing: 0.02em;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
+            font-weight: 300;
         }
 
-        .footer-bottom span {
-            color: var(--accent);
-        }
-
-        /* ========== ANIMATIONS ========== */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounceDown {
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-                opacity: 0.7;
-            }
-            50% {
-                transform: translateX(-50%) translateY(8px);
-                opacity: 1;
-            }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-delay-1 {
-            transition-delay: 0.1s;
-        }
-        .reveal-delay-2 {
-            transition-delay: 0.2s;
-        }
-        .reveal-delay-3 {
-            transition-delay: 0.3s;
-        }
-
-        /* ========== RESPONSIVE ========== */
+        /* ————— RESPONSIVE ————— */
         @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 3rem;
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
             }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .service-category {
+                padding: 32px 24px;
             }
-
-            .nav-list {
-                gap: 18px;
+            .team-grid {
+                gap: 24px;
             }
-            .nav-list a {
-                font-size: 0.68rem;
-                letter-spacing: 0.06em;
+            .team-card {
+                padding: 36px 24px 32px;
+            }
+            .reviews-grid {
+                gap: 20px;
+            }
+            .review-card {
+                padding: 28px 24px;
             }
         }
 
-        @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
             }
-
-            .section-title {
-                font-size: 1.8rem;
-                letter-spacing: 0.06em;
+            .service-category:last-child {
+                grid-column: span 2;
             }
-
-            .hero {
-                padding: 120px 16px 80px;
-                min-height: 90vh;
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
             }
-
-            .hero-title {
-                font-size: 2.2rem;
-                letter-spacing: 0.06em;
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
             }
-
-            .hero-tagline {
-                font-size: 0.8rem;
-                letter-spacing: 0.1em;
-                line-height: 1.6;
-            }
-
-            .hero-description {
-                font-size: 0.9rem;
-                line-height: 1.65;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
+            .team-card:last-child {
+                grid-column: span 2;
+                max-width: 400px;
+                margin: 0 auto;
                 width: 100%;
-                gap: 12px;
             }
-
-            .hero-buttons .btn {
-                width: 100%;
-                justify-content: center;
-                padding: 14px 24px;
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
             }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
 
-            .nav {
+        @media (max-width: 700px) {
+            .nav-links {
                 display: none;
             }
-
             .hamburger {
                 display: flex;
             }
-
-            .header-inner {
-                height: 62px;
-            }
-
             .mobile-menu {
                 display: flex;
             }
-
-            .form-row {
+            .section-padding {
+                padding: 72px 20px;
+            }
+            :root {
+                --section-padding: 72px 20px;
+            }
+            .hero {
+                padding: 100px 20px 60px;
+                min-height: 90vh;
+            }
+            .hero-title {
+                font-size: clamp(2.5rem, 10vw, 3.6rem);
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 14px 28px;
+            }
+            .trust-inner {
+                justify-content: center;
+                gap: 16px;
+            }
+            .trust-item {
+                font-size: 0.75rem;
+                gap: 8px;
+            }
+            .trust-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
+            }
+            .services-grid {
                 grid-template-columns: 1fr;
             }
-
-            .prices-grid,
-            .services-grid,
-            .team-grid,
-            .reviews-grid {
+            .service-category:last-child {
+                grid-column: span 1;
+            }
+            .why-grid {
                 grid-template-columns: 1fr;
-                gap: 18px;
             }
-
-            .hero-scroll {
-                bottom: 16px;
+            .team-grid {
+                grid-template-columns: 1fr;
             }
-
-            .contact-card {
-                padding: 18px 20px;
+            .team-card:last-child {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+            .reviews-badge {
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px 24px;
+            }
+            .reviews-badge .badge-text {
+                text-align: center;
+            }
+            .section-label::before,
+            .section-label::after {
+                display: none;
+            }
+            .section-title {
+                font-size: 1.9rem;
+            }
+            .navbar {
+                padding: 16px 0;
+            }
+            .navbar.scrolled {
+                padding: 10px 0;
+            }
+            .nav-logo {
+                font-size: 1.2rem;
             }
         }
 
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.7rem;
+        @media (max-width: 420px) {
+            .trust-inner {
+                flex-direction: column;
+                align-items: flex-start;
             }
-
-            .hero-badge {
-                font-size: 0.6rem;
-                padding: 8px 16px;
-                letter-spacing: 0.1em;
+            .trust-item {
+                font-size: 0.8rem;
             }
-
-            .btn {
-                padding: 13px 20px;
-                font-size: 0.72rem;
-                letter-spacing: 0.06em;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .price-card {
-                padding: 22px 20px;
-            }
-
-            .contact-form {
-                padding: 22px 18px;
-            }
-
-            .reviews-badge {
-                font-size: 0.65rem;
-                padding: 10px 18px;
+            .service-item {
                 flex-wrap: wrap;
-                justify-content: center;
-                text-align: center;
+            }
+            .service-dots {
+                display: none;
+            }
+            .service-price {
+                margin-left: auto;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <div class="header-inner">
-            <a href="#home" class="logo" aria-label="Barbershop De Rijn">
-                <div class="logo-icon">R</div>
-                <div class="logo-text">
-                    <span class="logo-main">DE RIJN</span>
-                    <span class="logo-sub">Barbershop Arnhem</span>
-                </div>
-            </a>
-            <nav class="nav" aria-label="Hoofd navigatie">
-                <ul class="nav-list">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#diensten">Diensten</a></li>
-                    <li><a href="#prijzen">Prijzen</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <a href="#contact" class="btn btn-primary btn-sm">Afspraak</a>
-            </nav>
-            <button class="hamburger" id="hamburger" aria-label="Menu openen">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="nav-logo">Barbershop <span>de Rijn</span></a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#team">Team</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-cta">Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
-    </header>
+    </nav>
 
-    <!-- Mobile menu -->
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobiel menu">
-        <a href="#home">Home</a>
-        <a href="#diensten">Diensten</a>
-        <a href="#prijzen">Prijzen</a>
+    <!-- ═══ MOBILE MENU ═══ -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#services">Services</a>
         <a href="#team">Team</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-primary">Maak een afspraak</a>
-    </nav>
+        <a href="#contact" class="mobile-cta">Book Appointment</a>
+    </div>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="home">
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="hero">
         <div class="hero-content">
-            <span class="hero-badge">SINDS 2016 &middot; ARNHEM</span>
-            <h1 class="hero-title">Barbershop<br><span>De Rijn</span></h1>
-            <p class="hero-tagline">D&eacute; plek voor herenkapsels en scheerbeurten in Arnhem</p>
-            <p class="hero-description">
-                Ervaar vakmanschap, precisie en ontspanning. Onze master barbers combineren
-                klassieke barbiertechnieken met moderne stijl. Stap binnen, laat je verwennen
-                en ga met een perfecte look weer naar buiten.
+            <div class="hero-badge fade-in visible">
+                <span class="dot"></span>
+                Arnhem · Rijnstraat 10
+                <span class="dot"></span>
+            </div>
+            <h1 class="hero-title fade-in visible">
+                Barbershop<br><em>de Rijn</em>
+            </h1>
+            <p class="hero-tagline fade-in visible" style="transition-delay: 0.15s;">
+                Premium herenkapsels &amp; scheerbeurten
             </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Maak een afspraak</a>
-                <a href="#diensten" class="btn btn-outline">Onze diensten</a>
+            <div class="hero-buttons fade-in visible" style="transition-delay: 0.3s;">
+                <a href="#contact" class="btn btn-dark">Book Appointment</a>
+                <a href="#services" class="btn btn-outline">View Services</a>
             </div>
         </div>
-        <div class="hero-scroll" aria-hidden="true">Scroll</div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
     </section>
 
-    <!-- ========== SERVICES ========== -->
-    <section class="services section" id="diensten">
+    <!-- ═══ TRUST BAR ═══ -->
+    <section class="trust-bar">
+        <div class="container trust-inner">
+            <div class="trust-item">
+                <div class="trust-icon">★</div>
+                <span><strong>4.9</strong> Google reviews</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">✦</div>
+                <span><strong>Open 6 dagen</strong> per week</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">✓</div>
+                <span><strong>Walk-ins</strong> welcome</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">◈</div>
+                <span><strong>Rijnstraat 10</strong> Arnhem</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" id="services">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-subtitle">Wat wij doen</span>
-                <h2 class="section-title">Onze diensten</h2>
-                <p class="section-description">Premium kapper- en barbierdiensten voor de moderne man</p>
-                <div class="accent-line"></div>
+            <div class="section-header fade-in">
+                <span class="section-label">Service Menu</span>
+                <h2 class="section-title">Onze Diensten</h2>
+                <p class="section-subtitle">Vakmanschap en precisie in elke knip en scheerbeurt. Alle prijzen inclusief persoonlijk advies en premium nazorg.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">✂️</div>
-                    <h3 class="service-title">Knippen</h3>
-                    <p class="service-text">Strakke herenkapsels, taperfades en klassieke snits. Altijd met oog voor detail en persoonlijke stijl.</p>
+                <!-- HAIRCUTS -->
+                <div class="service-category fade-in">
+                    <div class="service-cat-icon">✂</div>
+                    <h3 class="service-cat-title">Haircuts</h3>
+                    <p class="service-cat-desc">Precisie kapsels, op maat van uw gezichtsvorm en stijl.</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="service-name">Knippen volwassenen</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€27,50</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Taperfade</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€20</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Studenten</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€25</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Special Treatment</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€50</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Kinderen</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€22,50</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon">🪒</div>
-                    <h3 class="service-title">Scheren</h3>
-                    <p class="service-text">Traditionele natte scheerbeurten met warme doeken, verfrissende producten en precisie voor een glad resultaat.</p>
+
+                <!-- COMBOS -->
+                <div class="service-category fade-in fade-in-delay-1">
+                    <div class="service-cat-icon">✦</div>
+                    <h3 class="service-cat-title">Combos</h3>
+                    <p class="service-cat-desc">De complete ervaring: knip en baardverzorging in één.</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="service-name">Knippen &amp; lange baard</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€42,50</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Knippen &amp; korte baard</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€35</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">🧔</div>
-                    <h3 class="service-title">Baardverzorging</h3>
-                    <p class="service-text">Vakkundig baard modelleren, contouren strak zetten en volle baarden optimaal in vorm brengen.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">✨</div>
-                    <h3 class="service-title">Special Treatment</h3>
-                    <p class="service-text">De complete ervaring: knippen, scheren, verzorgen en stijlen. Een luxe behandeling voor de fijnproever.</p>
+
+                <!-- BEARD & EXTRAS -->
+                <div class="service-category fade-in fade-in-delay-2">
+                    <div class="service-cat-icon">◈</div>
+                    <h3 class="service-cat-title">Beard &amp; Extras</h3>
+                    <p class="service-cat-desc">Verzorging met hot towels en premium producten.</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="service-name">Baard scheren
+                                <span class="hot-towel">incl. hot towel</span>
+                            </span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€20</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Contouren</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€15</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Baard modelleren</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€17,50</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Snor</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€15</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Opscheren</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">€20</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PRIJZEN ========== -->
-    <section class="prices section" id="prijzen">
+    <!-- ═══ WHY US ═══ -->
+    <section class="why-us" id="why-us">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-subtitle">Transparant</span>
-                <h2 class="section-title">Prijslijst</h2>
-                <p class="section-description">Alle prijzen zijn inclusief btw en productgebruik</p>
-                <div class="accent-line"></div>
+            <div class="section-header fade-in">
+                <span class="section-label">Why Us</span>
+                <h2 class="section-title">Waarom Barbershop de Rijn</h2>
+                <p class="section-subtitle">Meer dan alleen een knipbeurt — een moment van rust en vakmanschap in het hart van Arnhem.</p>
             </div>
-            <div class="prices-grid">
-                <div class="price-card reveal reveal-delay-1">
-                    <
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <div class="why-icon">✂</div>
+                    <h4 class="why-title">Vakmanschap</h4>
+                    <p class="why-text">Meer dan 18 jaar ervaring in klassiek en modern barbierswerk, met oog voor detail en precisie.</p>
+                </div>
+                <div class="why-card fade-in fade-in-delay-1">
+                    <div class="why-icon">♡</div>
+                    <h4 class="why-title">Persoonlijke aandacht</h4>
+                    <p class="why-text">Geen haast, geen lopende band. We nemen de tijd voor u en uw haar — elke behandeling is uniek.</p>
+                </div>
+                <div class="why-card fade-in fade-in-delay-2">
+                    <div class="why-icon">✦</div>
+                    <h4 class="why-title">Premium producten</h4>
+                    <p class="why-text">We werken uitsluitend met hoogwaardige producten die goed zijn voor haar, baard en huid.</p>
+                </div>
+                <div class="why-card fade-in fade-in-delay-3">
+                    <div class="why-icon">◈</div>
+                    <h4 class="why-title">Centraal in Arnhem</h4>
+                    <p class="why-text">Makkelijk bereikbaar op Rijnstraat 10, midden in de stad. Loop gerust binnen voor een walk-in.</p>
+                </div>
+                <div class="why-card fade-in fade-in-delay-4">
+                    <div class="why-icon">☕</div>
+                    <h4 class="why-title">Ontspannen sfeer</h4>
+                    <p class="why-text">Een warme, gastvrije omgeving waar u zich direct thuis voelt. Koffie erbij, altijd.</p>
+                </div>
+                <div class="why-card fade-in fade-in-delay-4">
+                    <div class="why-icon">★</div>
+                    <h4 class="why-title">4.9 beoordeling</h4>
+                    <p class="why-text">Klanten waarderen ons met een 4.9 op Google. Uw tevredenheid is ons visitekaartje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TEAM ═══ -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Ons Team</span>
+                <h2 class="section-title">De Barbers</h2>
+                <p class="section-subtitle">Ervaren vakmensen die hun ambacht serieus nemen — en u met een glimlach ontvangen.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card fade-in">
+                    <div class="team-avatar">O</div>
+                    <h4 class="team-name">Ozemarov</h4>
+                    <p class="team-role">Eigenaar · Master Barber</p>
+                    <p class="team-exp">18+ jaar ervaring in klassiek &amp; modern barbierswerk</p>
+                    <a href="#contact" class="btn-book">Book with Ozemarov</a>
+                </div>
+                <div class="team-card fade-in fade-in-delay-1">
+                    <div class="team-avatar">T</div>
+                    <h4 class="team-name">Tom</h4>
+                    <p class="team-role">Barber</p>
+                    <p class="team-exp">Specialist in taperfades en strakke lijnen</p>
+                    <a href="#contact" class="btn-book">Book with Tom</a>
+                </div>
+                <div class="team-card fade-in fade-in-delay-2">
+                    <div class="team-avatar">A</div>
+                    <h4 class="team-name">Arjan</h4>
+                    <p class="team-role">Barber</p>
+                    <p class="team-exp">Expert in baardverzorging en hot towel scheerbeurten</p>
+                    <a href="#contact" class="btn-book">Book with Arjan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ REVIEWS ═══ -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">Wat klanten zeggen</h2>
+            </div>
+            <div style="text-align: center;" class="fade-in">
+                <div class="reviews-badge">
+                    <span class="big-star">★</span>
+                    <div class="badge-text">
+                        <div class="badge-score">4.9</div>
+                        <div class="badge-label">Google Reviews</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Uitstekende service en ongeëvenaard vakmanschap. Ozemarov knipt al jaren perfect en de sfeer in de zaak is altijd warm en gastvrij. Absolute aanrader in Arnhem."</p>
+                    <p class="review-author"><span>—</span> Mark van D.</p>
+                </div>
+                <div class="review-card fade-in fade-in-delay-1">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Fijne zaak met echte professionals. Elke keer weer strak geknipt en de baardverzorging is top. Je voelt je hier echt even verwend. Vaste plek voor mij."</p>
+                    <p class="review-author"><span>—</span> Sander J.</p>
+                </div>
+                <div class="review-card fade-in fade-in-delay-2">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Professionele barbers die weten wat ze doen. Loop altijd zonder afspraak binnen en word direct geholpen. Eerlijke prijzen en een relaxte sfeer. Dikke aanbeveling!"</p>
+                    <p class="review-author"><span>—</span> Thomas R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Bezoek Ons</h2>
+                <p class="section-subtitle">Maak een afspraak of loop gewoon binnen. We verwelkomen u graag in de zaak.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <h3>Barbershop de Rijn</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">◈</div>
+                        <div>
+                            <div class="contact-detail-label">Adres</div>
+                            <div class="contact-detail-value">Rijnstraat 10, Arnhem</div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">☎</div>
+                        <div>
+                            <div class="contact-detail-label">Telefoon</div>
+                            <div class="contact-detail-value"><a href="tel:+31619939261">06-1993 9261</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <div class="contact-detail-label">E-mail</div>
+                            <div class="contact-detail-value"><a href="mailto:info@barbershopderijn.nl">info@barbershopderijn.nl</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">★</div>
+                        <div>
+                            <div class="contact-detail-label">Google Reviews</div>
+                            <div class="contact-detail-value">4.9 uit 5 sterren</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours-box fade-in fade-in-delay-1">
+                    <h3>Openingstijden</h3>
+                    <div class="hours-row">
+                        <span class="hours-day">Dinsdag</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Woensdag</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Donderdag</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Vrijdag</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Zaterdag</span>
+                        <span class="hours-time">09:00 – 17:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Zondag &amp; Maandag</span>
+                        <span class="hours-time">Gesloten</span>
+                    </div>
+                    <p class="hours-note">Walk-ins always welcome. Voor gegarandeerde plekken adviseren wij een afspraak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Barbershop <span>de Rijn</span></div>
+            <p class="footer-address">Rijnstraat 10 · Arnhem · 06-1993 9261 · info@barbershopderijn.nl</p>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">&copy; 2025 Barbershop de Rijn. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script>
+        (function() {
+            // ——— Sticky Navbar ———
+            const navbar = document.getElementById('navbar');
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // ——— Mobile Menu Toggle ———
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+            }
+            hamburger.addEventListener('click', toggleMenu);
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            // ——— Intersection Observer for fade-in animations ———
+            const fadeElements = document.querySelectorAll('.fade-in:not(.visible)');
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -60px 0px'
+            });
+
+            fadeElements.forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // Make sure any elements already visible get the class
+            const visibleObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        visibleObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.05
+            });
+
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                visibleObserver.observe(el);
+            });
+
+            // ——— Smooth scroll for nav links ———
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const navHeight = navbar.offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window
+                            .pageYOffset - navHeight - 10;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ——— Trigger initial check ———
+            window.dispatchEvent(new Event('scroll'));
+        })();
+    </script>
+</body>
+</html>
