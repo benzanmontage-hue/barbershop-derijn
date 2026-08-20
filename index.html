@@ -1817,14 +1817,7 @@
     <!-- Back to top -->
     <button id="backTop" aria-label="Naar boven">↑</button>
 
-    <!-- Lenis — premium smooth scroll -->
-    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-    <script>
-        document.documentElement.classList.add('js');
-        const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
-    </script>
+    <!-- Lenis verwijderd — blokkeerde scrollen -->
 
     <!-- Vanta.js — subtiele gouden waves in de hero -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
