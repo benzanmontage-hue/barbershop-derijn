@@ -1826,6 +1826,30 @@
         requestAnimationFrame(raf);
     </script>
 
+    <!-- Vanta.js — subtiele gouden waves in de hero -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
+    <script>
+        if (document.getElementById('hero')) {
+            VANTA.WAVES({
+                el: "#hero",
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0xb08d57,
+                backgroundColor: 0xfbfaf7,
+                shininess: 25.00,
+                waveHeight: 8.00,
+                waveSpeed: 0.5,
+                zoom: 0.95
+            });
+        }
+    </script>
+
     <!-- Scroll-reveal + nav blur + back-to-top -->
     <script>
         // Scroll reveal
