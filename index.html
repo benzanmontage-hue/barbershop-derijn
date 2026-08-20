@@ -1578,5 +1578,27 @@
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
     </script>
+
+    <!-- Vanta.js — animated 3D background (subtiel goud) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#hero",
+            mouseControls: false,
+            touchControls: false,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xb08d57,
+            backgroundColor: 0xfbfaf7,
+            shininess: 30.00,
+            waveHeight: 12.00,
+            waveSpeed: 0.6,
+            zoom: 0.9
+        });
+    </script>
 </body>
 </html>
