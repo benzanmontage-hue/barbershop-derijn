@@ -22,7 +22,7 @@
   --sans:'Inter',-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -332,6 +332,12 @@ footer a:hover{color:var(--accent)}
 </footer>
 
 <button id="top" aria-label="Naar boven">↑</button>
+
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+// Lenis smooth scroll — autoRaf config (blokkeert niet)
+const lenis = new Lenis({ autoRaf: true, lerp: 0.1 });
+</script>
 
 <script>
 // Scroll reveal
