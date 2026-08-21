@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231a1712'/><text x='32' y='42' font-size='30' font-family='serif' font-style='italic' fill='%23b08d57' text-anchor='middle'>R</text></svg>">
 <style>
 :root{
   --bg:#faf8f4;
@@ -340,12 +341,12 @@ const io = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // Nav scroll + back to top
-const nav=document.getElementById('nav'), top=document.getElementById('top');
+const nav=document.getElementById('nav'), backTopBtn=document.getElementById('top');
 window.addEventListener('scroll',()=>{
   nav.classList.toggle('scrolled',window.scrollY>40);
-  top.classList.toggle('show',window.scrollY>600);
+  backTopBtn.classList.toggle('show',window.scrollY>600);
 });
-top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+backTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
