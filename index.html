@@ -132,9 +132,18 @@ footer a:hover{color:var(--accent)}
 #top.show{opacity:1;visibility:visible}
 #top:hover{background:var(--accent)}
 
+/* ── HAMBURGER / MOBILE MENU ── */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:110}
+.hamburger span{width:24px;height:2px;background:var(--ink);transition:all .3s}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:12px 24px;gap:4px;z-index:99}
+.mobile-menu a{display:block;padding:12px 0;font-size:.9rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--line)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:flex}
+
 /* ── RESPONSIVE ── */
 @media(max-width:860px){
   .nav-links{display:none}
+  .hamburger{display:flex}
   .hero .container{grid-template-columns:1fr;gap:36px;padding-top:60px}
   .hero-img img{height:340px}
   .diensten-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
@@ -154,6 +163,14 @@ footer a:hover{color:var(--accent)}
       <a href="#reviews">Reviews</a>
       <a href="#contact" class="nav-cta">Afspraak maken</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#diensten">Diensten</a>
+    <a href="#prijzen">Prijzen</a>
+    <a href="#team">Team</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact" class="nav-cta">Afspraak maken</a>
   </div>
 </nav>
 
@@ -201,11 +218,11 @@ footer a:hover{color:var(--accent)}
         <div class="dienst-body"><h3>Knippen</h3><div class="prijs">vanaf €27,50</div><p>Vakkundige knipbeurt naar jouw stijl.</p></div>
       </div>
       <div class="dienst reveal">
-        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80" alt="Baard verzorgen">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Baard verzorgen">
         <div class="dienst-body"><h3>Baard verzorgen</h3><div class="prijs">vanaf €17,50</div><p>Strakke beard styling en hot towel shaves.</p></div>
       </div>
       <div class="dienst reveal">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Fades & designs">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Fades & designs">
         <div class="dienst-body"><h3>Fades & designs</h3><div class="prijs">vanaf €20</div><p>Strakke fades en creatieve hair designs.</p></div>
       </div>
     </div>
@@ -347,6 +364,11 @@ window.addEventListener('scroll',()=>{
   backTopBtn.classList.toggle('show',window.scrollY>600);
 });
 backTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// Hamburger menu toggle
+const hamburger=document.getElementById('hamburger'), mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
 </script>
 </body>
 </html>
