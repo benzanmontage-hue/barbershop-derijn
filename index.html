@@ -149,11 +149,15 @@ footer a:hover{color:var(--accent)}
 .mobile-menu.open{display:flex}
 
 /* ── RESPONSIVE ── */
-@media(max-width:860px){
+@media(max-width:1024px){
   .nav-links{display:none}
   .hamburger{display:flex}
-  .hero .container{grid-template-columns:1fr;gap:36px;padding-top:60px}
-  .hero-img img{height:340px}
+  .hero .container{grid-template-columns:1fr;gap:36px;padding-top:70px}
+  .hero-img img{height:360px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+  .hero-img img{height:320px}
   .diensten-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
   footer .grid{grid-template-columns:1fr}
 }
