@@ -91,7 +91,7 @@ h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.8rem);l
 .prijs-row .prijs{font-family:var(--serif);font-weight:600;color:var(--accent)}
 
 /* ── TEAM ── */
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .team-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px 24px;text-align:center;transition:transform .35s,box-shadow .35s}
 .team-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,23,18,.1)}
 .team-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.7rem;margin:0 auto 16px}
@@ -108,6 +108,14 @@ h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.8rem);l
 .review blockquote{font-family:var(--serif);font-style:italic;font-size:1.02rem;line-height:1.6;color:#3a352c}
 .review .author{margin-top:16px;font-size:.82rem;color:var(--muted);font-weight:500}
 
+/* ── FAQ ── */
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:var(--card);overflow:hidden}
+.faq-item summary{cursor:pointer;padding:20px 24px;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.4rem;color:var(--accent);transition:transform .3s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{padding:0 24px 20px;color:var(--muted);font-size:.92rem}
+
 /* ── CTA ── */
 .cta{background:var(--ink);color:#fff;text-align:center;padding:88px 0}
 .cta h2{color:#fff}
@@ -117,7 +125,7 @@ h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.8rem);l
 
 /* ── FOOTER ── */
 footer{background:#14110d;color:rgba(255,255,255,.75);padding:64px 0 32px}
-footer .grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer .grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 footer h4{color:#fff;font-family:var(--serif);font-size:1.05rem;margin-bottom:16px}
 footer a{display:block;color:rgba(255,255,255,.65);font-size:.88rem;margin-bottom:8px;transition:color .3s}
 footer a:hover{color:var(--accent)}
@@ -160,7 +168,8 @@ footer a:hover{color:var(--accent)}
       <a href="#diensten">Diensten</a>
       <a href="#prijzen">Prijzen</a>
       <a href="#team">Team</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#over-ons">Over ons</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Afspraak maken</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -169,7 +178,8 @@ footer a:hover{color:var(--accent)}
     <a href="#diensten">Diensten</a>
     <a href="#prijzen">Prijzen</a>
     <a href="#team">Team</a>
-    <a href="#reviews">Reviews</a>
+    <a href="#over-ons">Over ons</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact" class="nav-cta">Afspraak maken</a>
   </div>
 </nav>
@@ -238,11 +248,12 @@ footer a:hover{color:var(--accent)}
     </div>
     <div class="prijslijst reveal">
       <div class="prijs-row"><span class="naam">Knippen volwassenen</span><span class="dots"></span><span class="prijs">€27,50</span></div>
-      <div class="prijs-row"><span class="naam">Taperfade only</span><span class="dots"></span><span class="prijs">€20,00</span></div>
       <div class="prijs-row"><span class="naam">Studenten</span><span class="dots"></span><span class="prijs">€25,00</span></div>
       <div class="prijs-row"><span class="naam">Special Treatment</span><span class="dots"></span><span class="prijs">€50,00</span></div>
       <div class="prijs-row"><span class="naam">Kinderen t/m 14 jr</span><span class="dots"></span><span class="prijs">€22,50</span></div>
       <div class="prijs-row"><span class="naam">Knippen & lange baard</span><span class="dots"></span><span class="prijs">€42,50</span></div>
+      <div class="prijs-row"><span class="naam">Knippen korte baard</span><span class="dots"></span><span class="prijs">€35,00</span></div>
+      <div class="prijs-row"><span class="naam">Knippen lange baard</span><span class="dots"></span><span class="prijs">€40,00</span></div>
       <div class="prijs-row"><span class="naam">Baard scheren (hot towel)</span><span class="dots"></span><span class="prijs">€20,00</span></div>
       <div class="prijs-row"><span class="naam">Baard modelleren</span><span class="dots"></span><span class="prijs">€17,50</span></div>
     </div>
@@ -258,26 +269,48 @@ footer a:hover{color:var(--accent)}
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-avatar">O</div>
-        <h3>Ozemarov</h3>
-        <div class="rol">Master Barber · Eigenaar</div>
-        <p>18+ jaar ervaring in klassiek en modern barbierswerk.</p>
-        <a href="#contact" class="team-book">Boek met Ozemarov</a>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-avatar">T</div>
-        <h3>Tom</h3>
-        <div class="rol">Barber</div>
-        <p>Specialist in skin fades en scissor cuts.</p>
-        <a href="#contact" class="team-book">Boek met Tom</a>
-      </div>
-      <div class="team-card reveal">
         <div class="team-avatar">A</div>
         <h3>Arjan</h3>
         <div class="rol">Barber</div>
         <p>Beard sculpting en klassieke coupes.</p>
         <a href="#contact" class="team-book">Boek met Arjan</a>
       </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">G</div>
+        <h3>Gian</h3>
+        <div class="rol">Barber</div>
+        <p>Skin fades en scissor cuts.</p>
+        <a href="#contact" class="team-book">Boek met Gian</a>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">D</div>
+        <h3>Diyar</h3>
+        <div class="rol">Barber</div>
+        <p>Scherpe lijnen en precisiewerk.</p>
+        <a href="#contact" class="team-book">Boek met Diyar</a>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">Y</div>
+        <h3>Yasser</h3>
+        <div class="rol">Barber</div>
+        <p>Klassiek barbierswerk en hot towel.</p>
+        <a href="#contact" class="team-book">Boek met Yasser</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVER ONS -->
+<section class="section" id="over-ons">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label">Over ons</div>
+      <h2>Barbershop de Rijn</h2>
+    </div>
+    <div class="reveal" style="max-width:720px;font-size:1.08rem;color:var(--muted)">
+      <p style="margin-bottom:20px">Sinds 18 jaar het vertrouwde adres aan de Rijnstraat in Arnhem. Bij Barbershop de Rijn draait alles om echt vakmanschap: scherpe fades, klassieke coupes en traditionele scheerbeurten met de hot towel.</p>
+      <p style="margin-bottom:20px">Ons team van barbiers neemt de tijd voor elke klant — op afspraak of gewoon walk-in. Geen haast, geen standaardkapsel, maar een look die bij jou past.</p>
+      <p>Kom gerust langs voor een bak koffie en een frisse look. Meerdere talen gesproken, iedereen welkom.</p>
     </div>
   </div>
 </section>
@@ -310,6 +343,61 @@ footer a:hover{color:var(--accent)}
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section" id="faq" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container" style="max-width:760px">
+    <div class="section-head reveal">
+      <div class="label">Veelgestelde vragen</div>
+      <h2>Goed om te weten</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq-item">
+        <summary>Moet ik een afspraak maken?</summary>
+        <p>Walk-ins zijn altijd welkom. Op drukke dagen (do, vr, za) raden we een afspraak aan zodat je niet hoeft te wachten.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wat kost een knipbeurt?</summary>
+        <p>Knippen volwassenen vanaf €27,50. Bekijk de volledige prijslijst hierboven voor baarden en special treatments.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Doen jullie ook baarden?</summary>
+        <p>Ja. Knippen korte baard €35, knippen lange baard €40, en traditionele hot towel shaves vanaf €20.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wanneer zijn jullie open?</summary>
+        <p>Ma 12:00–17:00, di & wo 09:30–18:00, do & vr 09:30–20:00, za 09:30–18:00. Zondag gesloten.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Waar zitten jullie en is er parkeergelegenheid?</summary>
+        <p>Rijnstraat 10 in het centrum van Arnhem. Parkeren kan in de omliggende garages of op loopafstand.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kan ik met pin betalen?</summary>
+        <p>Ja, pin en contant zijn beide mogelijk.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- OPENINGSTIJDEN -->
+<section class="section" id="openingstijden">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label">Openingstijden</div>
+      <h2>Wanneer we open zijn</h2>
+    </div>
+    <div class="prijslijst reveal" style="max-width:520px">
+      <div class="prijs-row"><span class="naam">Maandag</span><span class="dots"></span><span class="prijs">12:00 – 17:00</span></div>
+      <div class="prijs-row"><span class="naam">Dinsdag</span><span class="dots"></span><span class="prijs">09:30 – 18:00</span></div>
+      <div class="prijs-row"><span class="naam">Woensdag</span><span class="dots"></span><span class="prijs">09:30 – 18:00</span></div>
+      <div class="prijs-row"><span class="naam">Donderdag</span><span class="dots"></span><span class="prijs">09:30 – 20:00</span></div>
+      <div class="prijs-row"><span class="naam">Vrijdag</span><span class="dots"></span><span class="prijs">09:30 – 20:00</span></div>
+      <div class="prijs-row"><span class="naam">Zaterdag</span><span class="dots"></span><span class="prijs">09:30 – 18:00</span></div>
+      <div class="prijs-row"><span class="naam">Zondag</span><span class="dots"></span><span class="prijs">Gesloten</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta" id="contact">
   <div class="container">
@@ -336,14 +424,22 @@ footer a:hover{color:var(--accent)}
       </div>
       <div>
         <h4>Openingstijden</h4>
-        <a>Di–Vr 09:00–18:00</a>
-        <a>Za 09:00–17:00</a>
-        <a>Zo & Ma gesloten</a>
+        <a>Ma 12:00–17:00</a>
+        <a>Di & Wo 09:30–18:00</a>
+        <a>Do & Vr 09:30–20:00</a>
+        <a>Za 09:30–18:00</a>
+        <a>Zo gesloten</a>
+      </div>
+      <div>
+        <h4>Volg ons</h4>
+        <a href="https://instagram.com/barbershopderijn" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/barbershopderijn" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://tiktok.com/@barbershopderijn" target="_blank" rel="noopener">TikTok</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Barbershop de Rijn</span>
-      <span>Instagram · Facebook</span>
+      <span><a href="https://instagram.com/barbershopderijn" target="_blank" rel="noopener">Instagram</a> · <a href="https://facebook.com/barbershopderijn" target="_blank" rel="noopener">Facebook</a> · <a href="https://tiktok.com/@barbershopderijn" target="_blank" rel="noopener">TikTok</a></span>
     </div>
   </div>
 </footer>
