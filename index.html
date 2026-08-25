@@ -175,6 +175,24 @@ footer a:hover{color:var(--accent)}
   .diensten-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
   footer .grid{grid-template-columns:1fr}
 }
+
+/* ── OPENINGSTIJDEN ── */
+.ot-card{max-width:520px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.ot-status{display:flex;align-items:center;gap:10px;padding:16px 22px;font-size:.92rem;font-weight:600;border-bottom:1px solid var(--line)}
+.ot-status .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.ot-status.open{background:rgba(46,160,67,.07)}
+.ot-status.open .dot{background:#2ea043;box-shadow:0 0 0 4px rgba(46,160,67,.15)}
+.ot-status.closed{background:rgba(192,57,43,.05)}
+.ot-status.closed .dot{background:#c0392b;box-shadow:0 0 0 4px rgba(192,57,43,.12)}
+.ot-row{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;border-bottom:1px solid var(--line)}
+.ot-row:last-child{border-bottom:none}
+.ot-row .naam{font-weight:500;display:flex;align-items:center}
+.ot-row .tijd{font-weight:600;color:var(--accent-dark)}
+.ot-row.is-today{background:rgba(176,141,87,.10)}
+.ot-row.is-today .naam{font-weight:700;color:var(--ink)}
+.ot-badge{display:inline-block;background:var(--accent);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 9px;border-radius:100px;margin-left:9px}
+.ot-row.is-closed{opacity:.5}
+.ot-row.is-closed .tijd{color:var(--muted)}
 </style>
 <script type="application/ld+json">
 {
@@ -476,14 +494,15 @@ footer a:hover{color:var(--accent)}
       <div class="label">Openingstijden</div>
       <h2>Wanneer we open zijn</h2>
     </div>
-    <div class="prijslijst reveal" style="max-width:520px">
-      <div class="prijs-row"><span class="naam">Maandag</span><span class="dots"></span><span class="prijs">12:00 – 17:00</span></div>
-      <div class="prijs-row"><span class="naam">Dinsdag</span><span class="dots"></span><span class="prijs">09:30 – 18:00</span></div>
-      <div class="prijs-row"><span class="naam">Woensdag</span><span class="dots"></span><span class="prijs">09:30 – 18:00</span></div>
-      <div class="prijs-row"><span class="naam">Donderdag</span><span class="dots"></span><span class="prijs">09:30 – 20:00</span></div>
-      <div class="prijs-row"><span class="naam">Vrijdag</span><span class="dots"></span><span class="prijs">09:30 – 20:00</span></div>
-      <div class="prijs-row"><span class="naam">Zaterdag</span><span class="dots"></span><span class="prijs">09:30 – 18:00</span></div>
-      <div class="prijs-row"><span class="naam">Zondag</span><span class="dots"></span><span class="prijs">Gesloten</span></div>
+    <div class="ot-card reveal">
+      <div class="ot-status" id="otStatus"><span class="dot"></span><span id="otStatusText">…</span></div>
+      <div class="ot-row" data-day="1"><span class="naam">Maandag</span><span class="tijd">12:00 – 17:00</span></div>
+      <div class="ot-row" data-day="2"><span class="naam">Dinsdag</span><span class="tijd">09:30 – 18:00</span></div>
+      <div class="ot-row" data-day="3"><span class="naam">Woensdag</span><span class="tijd">09:30 – 18:00</span></div>
+      <div class="ot-row" data-day="4"><span class="naam">Donderdag</span><span class="tijd">09:30 – 20:00</span></div>
+      <div class="ot-row" data-day="5"><span class="naam">Vrijdag</span><span class="tijd">09:30 – 20:00</span></div>
+      <div class="ot-row" data-day="6"><span class="naam">Zaterdag</span><span class="tijd">09:30 – 18:00</span></div>
+      <div class="ot-row is-closed" data-day="0"><span class="naam">Zondag</span><span class="tijd">Gesloten</span></div>
     </div>
   </div>
 </section>
@@ -558,6 +577,31 @@ backTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'
 const hamburger=document.getElementById('hamburger'), mobileMenu=document.getElementById('mobileMenu');
 hamburger.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+// Openingstijden: markeer vandaag + live status
+(function(){
+  var hours = {0:null,1:['12:00','17:00'],2:['09:30','18:00'],3:['09:30','18:00'],4:['09:30','20:00'],5:['09:30','20:00'],6:['09:30','18:00']};
+  var now = new Date();
+  var day = now.getDay();
+  var mins = now.getHours()*60 + now.getMinutes();
+  var row = document.querySelector('.ot-row[data-day="'+day+'"]');
+  if (row) {
+    row.classList.add('is-today');
+    var nm = row.querySelector('.naam');
+    var b = document.createElement('span'); b.className='ot-badge'; b.textContent='Vandaag'; nm.appendChild(b);
+  }
+  var st = document.getElementById('otStatus');
+  var txt = document.getElementById('otStatusText');
+  var hh = hours[day];
+  if (hh) {
+    var o = parseInt(hh[0].split(':')[0])*60 + parseInt(hh[0].split(':')[1]);
+    var c = parseInt(hh[1].split(':')[0])*60 + parseInt(hh[1].split(':')[1]);
+    if (mins >= o && mins < c) { st.classList.add('open'); txt.textContent = 'Nu open tot ' + hh[1]; }
+    else { st.classList.add('closed'); txt.textContent = 'Nu gesloten · opent vandaag om ' + hh[0]; }
+  } else {
+    st.classList.add('closed'); txt.textContent = 'Nu gesloten · vandaag gesloten';
+  }
+})();
+
 </script>
 </body>
 </html>
