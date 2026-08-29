@@ -38,19 +38,16 @@ a{color:inherit;text-decoration:none}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 
 /* ── NAV ── */
-nav{position:sticky;top:0;z-index:100;transition:all .35s ease;padding:20px 0}
+nav{position:sticky;top:0;z-index:100;transition:all .35s ease;padding:14px 0}
 nav .container{display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.5px;color:#fff}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.5px;color:var(--ink)}
 .brand span{color:var(--accent)}
 .nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:.82rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#fff;opacity:.85;transition:opacity .3s}
+.nav-links a{font-size:.82rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);opacity:.75;transition:opacity .3s}
 .nav-links a:hover{opacity:1}
 .nav-cta{background:var(--ink);color:#fff!important;padding:11px 22px;border-radius:100px;opacity:1!important;transition:transform .3s ease,background .3s}
 .nav-cta:hover{transform:translateY(-1px);background:var(--accent-dark)}
 nav.scrolled{background:rgba(250,248,244,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;box-shadow:0 1px 0 var(--line)}
-nav.scrolled .brand{color:var(--ink)}
-nav.scrolled .nav-links a{color:var(--ink);opacity:.75}
-nav.scrolled .hamburger span{background:var(--ink)}
 
 /* ── HERO ── */
 .hero{min-height:calc(100vh - 28px);display:flex;align-items:center;position:relative;background:linear-gradient(rgba(26,23,18,.58),rgba(26,23,18,.82)),url('images/interieur.jpg') center/cover no-repeat}
@@ -169,7 +166,7 @@ footer a:hover{color:var(--accent)}
 
 /* ── HAMBURGER / MOBILE MENU ── */
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:110}
-.hamburger span{width:24px;height:2px;background:#fff;transition:all .3s}
+.hamburger span{width:24px;height:2px;background:var(--ink);transition:all .3s}
 .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:12px 24px;gap:4px;z-index:99}
 .mobile-menu a{display:block;padding:12px 0;font-size:.9rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--line)}
 .mobile-menu a:last-child{border-bottom:none}
@@ -243,7 +240,7 @@ footer a:hover{color:var(--accent)}
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "800"
+    "reviewCount": "500"
   },
   "areaServed": "Arnhem",
   "openingHoursSpecification": [
@@ -444,7 +441,7 @@ footer a:hover{color:var(--accent)}
     <div class="section-head reveal">
       <div class="label">Reviews</div>
       <h2>Wat klanten zeggen</h2>
-      <p class="sub">★ 4.9 gemiddeld uit 800+ Google reviews</p>
+      <p class="sub">★ 4.9 gemiddeld uit 500 Google reviews</p>
     </div>
     <div class="reviews-grid">
       <div class="review reveal">
@@ -498,26 +495,6 @@ footer a:hover{color:var(--accent)}
         <summary>Kan ik met pin betalen?</summary>
         <p>Ja, pin en contant zijn beide mogelijk.</p>
       </details>
-    </div>
-  </div>
-</section>
-
-<!-- OPENINGSTIJDEN -->
-<section class="section" id="openingstijden">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="label">Openingstijden</div>
-      <h2>Wanneer we open zijn</h2>
-    </div>
-    <div class="ot-card reveal">
-      <div class="ot-status" id="otStatus"><span class="dot"></span><span id="otStatusText">…</span></div>
-      <div class="ot-row" data-day="1"><span class="naam">Maandag</span><span class="tijd">12:00 – 17:00</span></div>
-      <div class="ot-row" data-day="2"><span class="naam">Dinsdag</span><span class="tijd">09:30 – 18:00</span></div>
-      <div class="ot-row" data-day="3"><span class="naam">Woensdag</span><span class="tijd">09:30 – 18:00</span></div>
-      <div class="ot-row" data-day="4"><span class="naam">Donderdag</span><span class="tijd">09:30 – 20:00</span></div>
-      <div class="ot-row" data-day="5"><span class="naam">Vrijdag</span><span class="tijd">09:30 – 20:00</span></div>
-      <div class="ot-row" data-day="6"><span class="naam">Zaterdag</span><span class="tijd">09:30 – 18:00</span></div>
-      <div class="ot-row is-closed" data-day="0"><span class="naam">Zondag</span><span class="tijd">Gesloten</span></div>
     </div>
   </div>
 </section>
@@ -593,31 +570,6 @@ backTopBtn.addEventListener('click',()=>scroller.scrollTo({top:0,behavior:'smoot
 const hamburger=document.getElementById('hamburger'), mobileMenu=document.getElementById('mobileMenu');
 hamburger.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
-// Openingstijden: markeer vandaag + live status
-(function(){
-  var hours = {0:null,1:['12:00','17:00'],2:['09:30','18:00'],3:['09:30','18:00'],4:['09:30','20:00'],5:['09:30','20:00'],6:['09:30','18:00']};
-  var now = new Date();
-  var day = now.getDay();
-  var mins = now.getHours()*60 + now.getMinutes();
-  var row = document.querySelector('.ot-row[data-day="'+day+'"]');
-  if (row) {
-    row.classList.add('is-today');
-    var nm = row.querySelector('.naam');
-    var b = document.createElement('span'); b.className='ot-badge'; b.textContent='Vandaag'; nm.appendChild(b);
-  }
-  var st = document.getElementById('otStatus');
-  var txt = document.getElementById('otStatusText');
-  var hh = hours[day];
-  if (hh) {
-    var o = parseInt(hh[0].split(':')[0])*60 + parseInt(hh[0].split(':')[1]);
-    var c = parseInt(hh[1].split(':')[0])*60 + parseInt(hh[1].split(':')[1]);
-    if (mins >= o && mins < c) { st.classList.add('open'); txt.textContent = 'Nu open tot ' + hh[1]; }
-    else { st.classList.add('closed'); txt.textContent = 'Nu gesloten · opent vandaag om ' + hh[0]; }
-  } else {
-    st.classList.add('closed'); txt.textContent = 'Nu gesloten · vandaag gesloten';
-  }
-})();
-
 </script>
 </body>
 </html>
