@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Barbershop de Rijn — Herenkapper & Barbier Arnhem Centrum">
 <meta property="og:description" content="Premium herenkapsels, skin fades en traditionele scheerbeurten. Rijnstraat 10, Arnhem.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80">
+<meta property="og:image" content="https://benzanmontage-hue.github.io/barbershop-derijn/images/exterieur.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Barbershop de Rijn — Herenkapper & Barbier Arnhem Centrum">
 <meta name="twitter:description" content="Premium herenkapsels, skin fades en traditionele scheerbeurten. Rijnstraat 10, Arnhem.">
@@ -40,33 +40,38 @@ a{color:inherit;text-decoration:none}
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .35s ease;padding:20px 0}
 nav .container{display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.5px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.5px;color:#fff}
 .brand span{color:var(--accent)}
 .nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:.82rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);opacity:.75;transition:opacity .3s}
+.nav-links a{font-size:.82rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#fff;opacity:.85;transition:opacity .3s}
 .nav-links a:hover{opacity:1}
 .nav-cta{background:var(--ink);color:#fff!important;padding:11px 22px;border-radius:100px;opacity:1!important;transition:transform .3s ease,background .3s}
 .nav-cta:hover{transform:translateY(-1px);background:var(--accent-dark)}
 nav.scrolled{background:rgba(250,248,244,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;box-shadow:0 1px 0 var(--line)}
+nav.scrolled .brand{color:var(--ink)}
+nav.scrolled .nav-links a{color:var(--ink);opacity:.75}
+nav.scrolled .hamburger span{background:var(--ink)}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:80px}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(rgba(26,23,18,.58),rgba(26,23,18,.82)),url('images/interieur.jpg') center/cover no-repeat}
+.hero .container{display:block;padding-top:80px}
+.hero-content{max-width:640px}
+.hero h1{color:#fff}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
 .eyebrow::before{content:'';width:32px;height:1px;background:var(--accent)}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.05;letter-spacing:-1px}
 h1 em{font-style:italic;color:var(--accent)}
-.hero p{color:var(--muted);font-size:1.08rem;font-weight:300;max-width:480px;margin:24px 0 32px}
+.hero p{color:rgba(255,255,255,.85);font-size:1.08rem;font-weight:300;max-width:520px;margin:24px 0 32px}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;font-size:.85rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;border:none;transition:all .3s cubic-bezier(.22,1,.36,1)}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-dark:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.16)}
 .btn-ghost{border:1px solid var(--line);background:transparent;color:var(--ink)}
 .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
-.hero-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(26,23,18,.16)}
-.hero-img img{height:520px;object-fit:cover;width:100%}
-.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(26,23,18,.25))}
-.hero-badge{position:absolute;bottom:20px;left:20px;color:#fff;font-family:var(--serif);font-style:italic;font-size:1.05rem;z-index:2}
+.hero .btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.hero .btn-ghost:hover{border-color:#fff}
+.over-ons{background:linear-gradient(rgba(26,23,18,.72),rgba(26,23,18,.8)),url('images/exterieur.jpg') center/cover no-repeat;color:#fff}
+.over-ons h2{color:#fff}
 
 /* ── TRUST BAR ── */
 .trust{background:var(--ink);color:#fff;padding:20px 0}
@@ -156,7 +161,7 @@ footer a:hover{color:var(--accent)}
 
 /* ── HAMBURGER / MOBILE MENU ── */
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:110}
-.hamburger span{width:24px;height:2px;background:var(--ink);transition:all .3s}
+.hamburger span{width:24px;height:2px;background:#fff;transition:all .3s}
 .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:12px 24px;gap:4px;z-index:99}
 .mobile-menu a{display:block;padding:12px 0;font-size:.9rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--line)}
 .mobile-menu a:last-child{border-bottom:none}
@@ -166,12 +171,10 @@ footer a:hover{color:var(--accent)}
 @media(max-width:1024px){
   .nav-links{display:none}
   .hamburger{display:flex}
-  .hero .container{grid-template-columns:1fr;gap:36px;padding-top:70px}
-  .hero-img img{height:360px}
+  .hero .container{padding-top:70px}
   .team-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:860px){
-  .hero-img img{height:320px}
   .diensten-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
   footer .grid{grid-template-columns:1fr}
 }
@@ -204,7 +207,7 @@ footer a:hover{color:var(--accent)}
   "url": "https://benzanmontage-hue.github.io/barbershop-derijn/",
   "telephone": "+31619939261",
   "email": "info@barbershopderijn.nl",
-  "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80",
+  "image": "https://benzanmontage-hue.github.io/barbershop-derijn/images/exterieur.jpg",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
@@ -296,7 +299,7 @@ footer a:hover{color:var(--accent)}
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div>
+    <div class="hero-content">
       <div class="eyebrow">Arnhem · Rijnstraat 10</div>
       <h1>Vakmanschap dat je <em>ziet</em> en voelt</h1>
       <p>Premium herenkapsels, signature skin fades en traditionele scheerbeurten. Sinds 18 jaar het vertrouwde adres in het hart van Arnhem.</p>
@@ -304,10 +307,6 @@ footer a:hover{color:var(--accent)}
         <a href="#contact" class="btn btn-dark">Maak een afspraak</a>
         <a href="#diensten" class="btn btn-ghost">Bekijk diensten</a>
       </div>
-    </div>
-    <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80" alt="Barbershop de Rijn interieur">
-      <div class="hero-badge">Vakmanschap sinds 18 jaar</div>
     </div>
   </div>
 </section>
@@ -333,15 +332,12 @@ footer a:hover{color:var(--accent)}
     </div>
     <div class="diensten-grid">
       <div class="dienst reveal">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Knippen">
         <div class="dienst-body"><h3>Knippen</h3><div class="prijs">vanaf €27,50</div><p>Vakkundige knipbeurt naar jouw stijl.</p></div>
       </div>
       <div class="dienst reveal">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Baard verzorgen">
         <div class="dienst-body"><h3>Baard verzorgen</h3><div class="prijs">vanaf €17,50</div><p>Strakke beard styling en hot towel shaves.</p></div>
       </div>
       <div class="dienst reveal">
-        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Fades & designs">
         <div class="dienst-body"><h3>Fades & designs</h3><div class="prijs">vanaf €27,50</div><p>Strakke fades en creatieve hair designs.</p></div>
       </div>
     </div>
@@ -409,13 +405,13 @@ footer a:hover{color:var(--accent)}
 </section>
 
 <!-- OVER ONS -->
-<section class="section" id="over-ons">
+<section class="section over-ons" id="over-ons">
   <div class="container">
     <div class="section-head reveal">
       <div class="label">Over ons</div>
       <h2>Barbershop de Rijn</h2>
     </div>
-    <div class="reveal" style="max-width:720px;font-size:1.08rem;color:var(--muted)">
+    <div class="reveal" style="max-width:720px;font-size:1.08rem;color:rgba(255,255,255,.82)">
       <p style="margin-bottom:20px">Sinds 18 jaar het vertrouwde adres aan de Rijnstraat in Arnhem. Bij Barbershop de Rijn draait alles om echt vakmanschap: scherpe fades, klassieke coupes en traditionele scheerbeurten met de hot towel.</p>
       <p style="margin-bottom:20px">Ons team van barbiers neemt de tijd voor elke klant — op afspraak of gewoon walk-in. Geen haast, geen standaardkapsel, maar een look die bij jou past.</p>
       <p>Kom gerust langs voor een bak koffie en een frisse look. Meerdere talen gesproken, iedereen welkom.</p>
