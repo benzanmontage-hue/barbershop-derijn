@@ -31,14 +31,14 @@
   --sans:'Inter',-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
+html{scroll-behavior:smooth;background:#d2cab9}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;border-radius:24px;overflow:auto;margin:14px;height:calc(100vh - 28px);box-shadow:0 24px 80px rgba(26,23,18,.22);scroll-behavior:smooth}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .35s ease;padding:20px 0}
+nav{position:sticky;top:0;z-index:100;transition:all .35s ease;padding:20px 0}
 nav .container{display:flex;align-items:center;justify-content:space-between}
 .brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.5px;color:#fff}
 .brand span{color:var(--accent)}
@@ -53,7 +53,7 @@ nav.scrolled .nav-links a{color:var(--ink);opacity:.75}
 nav.scrolled .hamburger span{background:var(--ink)}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(rgba(26,23,18,.58),rgba(26,23,18,.82)),url('images/interieur.jpg') center/cover no-repeat}
+.hero{min-height:calc(100vh - 28px);display:flex;align-items:center;position:relative;background:linear-gradient(rgba(26,23,18,.58),rgba(26,23,18,.82)),url('images/interieur.jpg') center/cover no-repeat}
 .hero .container{display:block;padding-top:80px}
 .hero-content{max-width:640px}
 .hero h1{color:#fff}
@@ -157,7 +157,7 @@ footer a:hover{color:var(--accent)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* ── BACK TO TOP ── */
-#top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:none;font-size:18px;cursor:pointer;opacity:0;visibility:hidden;transition:all .4s;z-index:90}
+#top{position:fixed;bottom:34px;right:34px;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:none;font-size:18px;cursor:pointer;opacity:0;visibility:hidden;transition:all .4s;z-index:90}
 #top.show{opacity:1;visibility:visible}
 #top:hover{background:var(--accent)}
 
@@ -375,28 +375,28 @@ footer a:hover{color:var(--accent)}
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-photo"><img src="images/arjan.jpg" alt="Arjan"></div>
+        <div class="team-photo"><img src="images/arjan.jpg?v=2" alt="Arjan"></div>
         <h3>Arjan</h3>
         <div class="rol">Barber</div>
         <p>Beard sculpting en klassieke coupes.</p>
         <a href="#contact" class="team-book">Boek met Arjan</a>
       </div>
       <div class="team-card reveal">
-        <div class="team-photo"><img src="images/gian.jpg" alt="Gian"></div>
+        <div class="team-photo"><img src="images/gian.jpg?v=2" alt="Gian"></div>
         <h3>Gian</h3>
         <div class="rol">Barber</div>
         <p>Skin fades en scissor cuts.</p>
         <a href="#contact" class="team-book">Boek met Gian</a>
       </div>
       <div class="team-card reveal">
-        <div class="team-photo"><img src="images/diyar.jpg" alt="Diyar"></div>
+        <div class="team-photo"><img src="images/diyar.jpg?v=2" alt="Diyar"></div>
         <h3>Diyar</h3>
         <div class="rol">Barber</div>
         <p>Scherpe lijnen en precisiewerk.</p>
         <a href="#contact" class="team-book">Boek met Diyar</a>
       </div>
       <div class="team-card reveal">
-        <div class="team-photo"><img src="images/yasser.jpg" alt="Yasser"></div>
+        <div class="team-photo"><img src="images/yasser.jpg?v=2" alt="Yasser"></div>
         <h3>Yasser</h3>
         <div class="rol">Barber</div>
         <p>Klassiek barbierswerk en hot towel.</p>
@@ -568,11 +568,12 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // Nav scroll + back to top
 const nav=document.getElementById('nav'), backTopBtn=document.getElementById('top');
-window.addEventListener('scroll',()=>{
-  nav.classList.toggle('scrolled',window.scrollY>40);
-  backTopBtn.classList.toggle('show',window.scrollY>600);
+const scroller=document.scrollingElement||document.documentElement;
+document.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scroller.scrollTop>40);
+  backTopBtn.classList.toggle('show',scroller.scrollTop>600);
 });
-backTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+backTopBtn.addEventListener('click',()=>scroller.scrollTo({top:0,behavior:'smooth'}));
 
 // Hamburger menu toggle
 const hamburger=document.getElementById('hamburger'), mobileMenu=document.getElementById('mobileMenu');
