@@ -73,6 +73,12 @@ h1 em{font-style:italic;color:var(--accent)}
 .over-ons{background:linear-gradient(rgba(26,23,18,.72),rgba(26,23,18,.8)),url('images/exterieur.jpg') center/cover no-repeat;color:#fff}
 .over-ons h2{color:#fff}
 .over-ons blockquote{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--accent);margin-top:28px;padding-left:18px;border-left:3px solid var(--accent)}
+.over-ons .cols{columns:2;column-gap:44px}
+.over-ons .cols p{break-inside:avoid}
+.over-ons .cols blockquote{column-span:all;break-inside:avoid}
+@media(max-width:760px){
+  .over-ons .cols{columns:1}
+}
 
 /* ── TRUST BAR ── */
 .trust{background:var(--ink);color:#fff;padding:20px 0}
@@ -81,7 +87,7 @@ h1 em{font-style:italic;color:var(--accent)}
 .trust-item b{color:var(--accent);font-weight:600}
 
 /* ── SECTIES ── */
-.section{padding:96px 0}
+.section{padding:80px 0}
 .section-head{max-width:640px;margin-bottom:56px}
 .label{font-size:.72rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;letter-spacing:-.5px}
@@ -177,8 +183,16 @@ footer a:hover{color:var(--accent)}
   .team-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:860px){
-  .diensten-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
+  .diensten-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .reviews-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:14px;padding-bottom:14px;scrollbar-width:none}
+  .reviews-grid::-webkit-scrollbar{display:none}
+  .review{flex:0 0 82%;scroll-snap-align:center}
   footer .grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .section{padding:56px 0}
+  .section-head{margin-bottom:40px}
 }
 
 /* ── OPENINGSTIJDEN ── */
@@ -413,7 +427,7 @@ footer a:hover{color:var(--accent)}
       <div class="label">De herenkapper van Arnhem</div>
       <h2>Wie zijn wij</h2>
     </div>
-    <div class="reveal" style="max-width:720px;font-size:1.08rem;color:rgba(255,255,255,.82)">
+    <div class="reveal cols" style="max-width:880px;font-size:1.05rem;color:rgba(255,255,255,.82)">
       <p style="margin-bottom:20px">Barbershop de Rijn, de herenbarbershop van Arnhem, hier waar jij terecht kan! Heb jij een lange, korte, dunne of dikke baard? Dan ben je hier op de juiste plek. Iedereen is welkom bij ons, jong en oud.</p>
       <p style="margin-bottom:20px">De passie voor knippen, de sfeer die je doet voelen alsof je thuis bent, maakt dat deze barbershop er eentje is zoals hij hoort te zijn. Een knipbeurt bij ons is een totaal beleving. De sfeer, muziek en het genot van een kop koffie, fris of ander drankje zorgen ervoor dat jij je welkom voelt.</p>
       <p style="margin-bottom:20px">Wij staan klaar om jouw haar te knippen, je baard te scheren/trimmen of jouw snor netjes bij te werken.</p>
