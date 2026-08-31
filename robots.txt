@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://benzanmontage-hue.github.io/barbershop-derijn/sitemap.xml
+Sitemap: https://barbershopderijn.nl/sitemap.xml
