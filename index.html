@@ -172,6 +172,12 @@ footer a:hover{color:var(--accent)}
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu.open{display:flex}
 
+/* ── MOBILE STICKY BAR ── */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;background:#14110d;padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -6px 24px rgba(0,0,0,.25)}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;border-radius:12px;font-size:.9rem;font-weight:600;letter-spacing:.5px;text-decoration:none}
+.mobile-bar .bar-call{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.mobile-bar .bar-book{background:var(--accent);color:#fff}
+
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .nav-links{display:none}
@@ -180,6 +186,7 @@ footer a:hover{color:var(--accent)}
   .team-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:860px){
+  .mobile-bar{display:flex}
   .diensten-grid{grid-template-columns:1fr}
   .team-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .reviews-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:14px;padding-bottom:14px;scrollbar-width:none}
@@ -188,8 +195,12 @@ footer a:hover{color:var(--accent)}
   footer .grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
-  .section{padding:56px 0}
-  .section-head{margin-bottom:40px}
+  .section{padding:52px 0}
+  .section-head{margin-bottom:36px}
+  .hero{min-height:auto;padding:72px 0 64px}
+  .dienst img{height:150px}
+  #top{bottom:82px;right:14px}
+  body{padding-bottom:76px}
 }
 
 /* ── OPENINGSTIJDEN ── */
@@ -573,5 +584,9 @@ const hamburger=document.getElementById('hamburger'), mobileMenu=document.getEle
 hamburger.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
 </script>
+<div class="mobile-bar">
+  <a href="tel:+31619939261" class="bar-call">📞 Bel</a>
+  <a href="https://barbershopderijn.setmore.com/" target="_blank" rel="noopener" class="bar-book">📅 Boek online</a>
+</div>
 </body>
 </html>
