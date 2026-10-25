@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Barbershop de Rijn",
+    "documentationUrl": "https://barbershopderijn.nl/",
+    "logoUrl": "https://barbershopderijn.nl/images/exterieur.jpg"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:barbershopderijn:web:site",
+      "displayName": "Barbershop de Rijn — website",
+      "type": "application/agent-card+json",
+      "url": "https://barbershopderijn.nl/",
+      "description": "Barber en herenkapper in hartje Arnhem (Rijnstraat 10). Knipbeurten, baardverzorging, hot towel shave en skin fades.",
+      "tags": [
+        "barbershopderijn",
+        "website",
+        "lokaal",
+        "nederland"
+      ],
+      "representativeQueries": [
+        "kapper arnhem centrum",
+        "heren kapper arnhem",
+        "barber arnhem",
+        "baard trimmen arnhem"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-25T00:00:00Z"
+    }
+  ]
+}
